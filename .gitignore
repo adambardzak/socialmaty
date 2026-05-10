@@ -10,7 +10,8 @@ out
 tsconfig.tsbuildinfo
 next-env.d.ts
 
-# video sources (hosted on Cloudflare R2, never commit)
+# video sources (only commit the compressed 720p version)
 public/*.mp4
 public/*.mov
 public/*.webm
+!public/trenink_zdarma_720p.mp4

@@ -101,7 +101,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 
   const bunny = process.env.NEXT_PUBLIC_TRAINING_BUNNY;
   const ytId = process.env.NEXT_PUBLIC_TRAINING_YT_ID;
-  const videoSrc = process.env.NEXT_PUBLIC_TRAINING_VIDEO_URL;
+  const videoSrc = process.env.NEXT_PUBLIC_TRAINING_VIDEO_URL || "/trenink_zdarma_720p.mp4";
 
   return (
     <>
