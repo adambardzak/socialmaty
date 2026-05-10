@@ -12,7 +12,7 @@ interface Props {
 export default function LeadForm({
   source,
   buttonLabel = "Chci trénink zdarma →",
-  redirectTo = "/system",
+  redirectTo = "/trenink",
   variant = "default",
 }: Props) {
   const [name, setName] = useState("");

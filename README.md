@@ -31,9 +31,14 @@ Open http://localhost:3000.
 ```
 Visitor → /  (opt-in) → POST /api/lead
                          → Ecomail subscribe (tag: lead, trenink-zdarma)
-                         → redirect to /system?name=...&email=...
+                         → redirect to /trenink?name=...&email=...
+                         → Ecomail automation fires: email with link to /trenink
 
-         /system (training video + sales)
+         /trenink (free training video, no sales pitch)
+                         → soft Instagram CTA, no upsell
+                         → Ecomail follow-up email sequence may pitch /system later
+
+         /system (sales page for Projekt Organika — separate product)
                          → click CTA → POST /api/checkout
                          → Stripe Checkout (697 Kč or 997 Kč after 100 sold)
 
@@ -46,6 +51,25 @@ Visitor → /  (opt-in) → POST /api/lead
                          → verify session paid
                          → show onboarding + Circle button
 ```
+
+### Ecomail email template
+
+After opt-in, Ecomail should send an automation email to the new subscriber with the
+training link. Suggested template:
+
+> **Subject**: Tady je tvůj trénink zdarma 🎬
+>
+> Ahoj {{ FNAME }},
+>
+> díky! Tady je odkaz na 27minutový trénink:
+>
+> 👉 https://socialmaty.cz/trenink
+>
+> Vezmi si tužku, papír a 30 minut klidu. Uvidíme se uvnitř.
+>
+> — Matyáš
+
+Trigger: subscriber added to list with tag `lead`.
 
 ## API routes
 
