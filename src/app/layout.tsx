@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter", display: "swap" });
 const poppins = Poppins({
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="cs" className={`${inter.variable} ${poppins.variable} ${mono.variable}`}>
       <body className="bg-bg text-ink font-sans">
+        <ScrollReveal />
         <main className="min-h-[80vh]">{children}</main>
         <Footer />
         <Analytics />
