@@ -9,3 +9,8 @@ out
 .vercel
 tsconfig.tsbuildinfo
 next-env.d.ts
+
+# video sources (hosted on Cloudflare R2, never commit)
+public/*.mp4
+public/*.mov
+public/*.webm
