@@ -19,7 +19,7 @@ interface Item {
 
 const items: Item[] = [
   {
-    href: "/",
+    href: "/trenink",
     badge: "ZDARMA · TRÉNINK",
     title: "Jak získat +10K sledujících za 90 dní",
     price: "Zdarma →",
