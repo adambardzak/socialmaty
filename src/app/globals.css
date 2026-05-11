@@ -72,7 +72,7 @@ body {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#001a08] via-[#003d18] to-[#005a25] border border-[#006a2d] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#002211] hover:via-[#004d20] hover:to-[#00702e] hover:shadow-[0_0_40px_rgba(0,209,65,0.25)] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#003311] via-[#007a26] to-[#00d141] border border-[#00d141] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#004417] hover:via-[#009230] hover:to-[#1cd757] hover:shadow-[0_0_40px_rgba(0,209,65,0.35)] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed;
   }
 
   .btn-secondary {
