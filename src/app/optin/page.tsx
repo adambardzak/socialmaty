@@ -16,8 +16,16 @@ export default function OptinPage() {
         <div className="lg:grid lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:items-start">
           {/* HEADLINE */}
           <div data-reveal className="text-center lg:text-left lg:row-start-1 lg:col-start-1">
-            <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
-              <span className="block text-accent">GROWMAT® SYSTÉM:</span>{" "}
+            <Image
+              src="/growik.png"
+              alt="Growmat maskot"
+              width={120}
+              height={120}
+              priority
+              className="mx-auto lg:mx-0 h-24 w-24 sm:h-28 sm:w-28 object-contain"
+            />
+            <h1 className="mt-4 font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+              <span className="block text-accent">GROWMAT SYSTÉM®:</span>{" "}
               Získej +10 000 sledujících a první prodeje z Instagramu pomocí 5–8 sek. videí
             </h1>
             <p className="mt-4 font-display text-lg sm:text-2xl lg:text-2xl text-ink leading-snug">
