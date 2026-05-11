@@ -2,7 +2,6 @@ import Image from "next/image";
 import CheckoutButton from "@/components/CheckoutButton";
 import VslPlayer from "@/components/VslPlayer";
 import FAQ from "@/components/FAQ";
-import Header from "@/components/Header";
 import CaseStudiesCarousel from "@/components/CaseStudiesCarousel";
 import StickyCta from "@/components/StickyCta";
 
@@ -104,11 +103,10 @@ export default function SystemPage({ searchParams }: PageProps) {
 
   return (
     <>
-      <Header />
       <StickyCta href="#nabidka" label="Vstoupit za 697 Kč" />
 
       {/* SECTION 1: HERO + VIDEO */}
-      <section className="container-page pt-32 pb-12">
+      <section className="container-page pt-16 pb-12">
         <h1
           className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight"
           data-reveal

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
-import Header from "@/components/Header";
 
 export const metadata = {
   title: "Growmat Systém® · Trénink zdarma",
@@ -12,10 +11,8 @@ export const metadata = {
 export default function OptinPage() {
   return (
     <>
-      <Header />
-
       {/* HERO + OPTIN */}
-      <section className="container-page pt-32 pb-20">
+      <section className="container-page pt-16 pb-20">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
           <div data-reveal>
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">

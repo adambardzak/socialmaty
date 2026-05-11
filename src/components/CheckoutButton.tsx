@@ -1,3 +1,5 @@
+import { ArrowRight } from "./Icons";
+
 interface Props {
   label?: string;
   className?: string;
@@ -13,7 +15,7 @@ export const CIRCLE_CHECKOUT_URL =
   "https://growmatacademy.circle.so/checkout/-projekt-organikar";
 
 export default function CheckoutButton({
-  label = "Zajistit místo za 697 Kč →",
+  label = "Zajistit místo za 697 Kč",
   className = "btn-primary w-full",
 }: Props) {
   return (
@@ -24,6 +26,7 @@ export default function CheckoutButton({
       className={className}
     >
       {label}
+      <ArrowRight />
     </a>
   );
 }
