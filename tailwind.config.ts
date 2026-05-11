@@ -27,8 +27,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
-        display: ["var(--font-poppins)", "ui-sans-serif", "system-ui"],
-        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        display: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
+        mono: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
       },
       borderRadius: {
         none: "0",
