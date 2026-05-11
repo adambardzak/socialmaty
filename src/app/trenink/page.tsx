@@ -111,7 +111,7 @@ export default function SystemPage({ searchParams }: PageProps) {
           className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight"
           data-reveal
         >
-          Growmat <span className="text-accent">Systém®</span>
+          Growmat Systém®
         </h1>
         <p
           className="mt-4 max-w-3xl font-display text-xl sm:text-2xl text-ink leading-snug"
