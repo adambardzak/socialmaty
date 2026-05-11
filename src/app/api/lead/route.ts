@@ -34,15 +34,23 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Bez souhlasu nemůžeme kontakt uložit." }, { status: 400 });
 
   // 1) Ecomail (socialmaty list — ECOMAIL_LIST_ID v env)
-  await ecomailSubscribe({
-    email,
-    name,
-    tags: ["lead", "trenink-zdarma", `source-${source}`],
-    triggerAutoresponders: true,
-  });
+  try {
+    await ecomailSubscribe({
+      email,
+      name,
+      tags: ["lead", "trenink-zdarma", `source-${source}`],
+      triggerAutoresponders: true,
+    });
+  } catch (err) {
+    console.error("[lead] ecomail threw", err);
+  }
 
   // 2) Circle (Growmat Academy — pozve do prostoru, pošle invite email)
-  await circleInviteToOrganika({ email, name });
+  try {
+    await circleInviteToOrganika({ email, name });
+  } catch (err) {
+    console.error("[lead] circle threw", err);
+  }
 
   return NextResponse.json({ ok: true });
 }
