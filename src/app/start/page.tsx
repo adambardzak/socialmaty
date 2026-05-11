@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Logo";
+import { ArrowRight, CheckCircle, Star } from "@/components/Icons";
 
 export const metadata = {
   title: "Socialmaty — Začni tady",
@@ -10,39 +11,43 @@ export const metadata = {
 
 interface Item {
   href: string;
-  badge?: string;
+  badge: string;
   title: string;
-  price?: string;
   description: string;
+  price: string;
   external?: boolean;
 }
 
 const items: Item[] = [
   {
     href: "/optin",
-    badge: "ZDARMA · TRÉNINK",
+    badge: "Trénink zdarma",
     title: "Jak získat +10K sledujících za 90 dní",
-    price: "Zdarma →",
     description:
       "27 min trénink. Konkrétní systém 5–8 sek. videí, který nasbíral 30M+ organických zhlédnutí.",
+    price: "Zdarma",
   },
   {
-    href: "https://projektorganika.cz",
-    badge: "PLACENÝ KURZ",
+    href: "/trenink",
+    badge: "Placený kurz",
     title: "Projekt Organika",
-    price: "→",
     description:
       "3 dny intenzivního tréninku · konkrétní výstupy · moje osobní zpětná vazba.",
-    external: true,
+    price: "697 Kč",
   },
 ];
 
 export default function StartPage() {
   return (
     <div className="container-page max-w-md py-10">
+      {/* Wordmark */}
+      <div className="flex justify-center" data-reveal>
+        <Logo size="sm" />
+      </div>
+
       {/* Profile */}
-      <div className="flex flex-col items-center text-center" data-reveal>
-        <div className="relative h-24 w-24 overflow-hidden rounded-full border-2 border-ink">
+      <div className="mt-10 flex flex-col items-center text-center" data-reveal>
+        <div className="relative h-24 w-24 overflow-hidden rounded-full border border-line">
           <Image
             src="/img/maty.webp"
             alt="Matyáš Linda"
@@ -52,93 +57,123 @@ export default function StartPage() {
             priority
           />
         </div>
-        <h1 className="mt-4 font-display text-xl font-bold">Matyáš Linda</h1>
+        <h1 className="mt-4 flex items-center gap-2 font-bold text-xl">
+          Matyáš Linda
+          <CheckCircle size={20} />
+        </h1>
         <p className="mt-1 text-sm text-muted">
-          Zakladatel{" "}
-          <span className="text-ink font-semibold">Growmat Systém®</span> · 30M+
-          organických zhlédnutí
+          Zakladatel Growmat Academy · 30M+ organických zhlédnutí
         </p>
       </div>
 
-      {/* Heading */}
-      <h2
-        className="mt-10 font-display text-2xl font-bold leading-tight text-center"
-        data-reveal
-      >
-        Naučím Tě růst na Instagramu pomocí{" "}
-        <span className="text-accent">5–8 sek. videí.</span>
-      </h2>
+      {/* Experts pill */}
+      <div className="mt-6 flex justify-center" data-reveal data-reveal-delay="1">
+        <div className="flex items-center gap-2.5 rounded-full border border-line bg-white px-4 py-2">
+          <div className="flex items-center gap-0.5">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star key={i} size={13} />
+            ))}
+          </div>
+          <div className="h-3.5 w-px bg-line" />
+          <div className="flex -space-x-1.5">
+            {[
+              { src: "/img/experti/vermione.png", alt: "Vermione" },
+              { src: "/img/experti/martin.png", alt: "Martin" },
+              { src: "/img/experti/celiso.png", alt: "Celiso" },
+            ].map((e) => (
+              <div
+                key={e.alt}
+                className="relative h-6 w-6 overflow-hidden rounded-full border-[1.5px] border-white bg-line"
+              >
+                <Image src={e.src} alt={e.alt} width={24} height={24} className="object-cover" />
+              </div>
+            ))}
+          </div>
+          <span className="text-[13px] font-semibold text-ink">50+ expertů</span>
+        </div>
+      </div>
 
       {/* Value ladder */}
-      <ul className="mt-10 border-t border-line" data-reveal>
+      <div className="mt-10 space-y-4" data-reveal data-reveal-delay="2">
         {items.map((item) => (
-          <li key={item.href} className="border-b border-line">
-            <ItemLink item={item} />
-          </li>
+          <ItemCard key={item.href} item={item} />
         ))}
-      </ul>
+      </div>
 
-      {/* Secondary */}
-      <div
-        className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-mono uppercase tracking-[0.16em]"
-        data-reveal
-      >
-        <a href="mailto:matyas@socialmaty.cz" className="border-b border-ink text-ink">
-          Kontakt
-        </a>
+      {/* Instagram pill */}
+      <div className="mt-10 flex justify-center" data-reveal>
         <a
           href="https://instagram.com/socialmaty"
           target="_blank"
-          rel="noopener noreferrer"
-          className="border-b border-ink text-ink"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-2 transition-colors hover:border-accent/40"
         >
-          Instagram
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#00d141"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+          <span className="text-[13px] font-semibold text-ink">@socialmaty</span>
+          <span className="text-[12px] text-muted">· sleduj na Instagramu</span>
         </a>
       </div>
 
-      <div className="mt-10 surface-card p-5" data-reveal>
-        <Logo className="mb-3" />
-        <p className="text-sm text-muted">
-          Growmat Systém® je tréninkový program pro podnikatele, kteří chtějí růst na
-          Instagramu organicky — bez reklamy a bez agentury.
-        </p>
+      {/* Secondary */}
+      <div
+        className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-muted"
+        data-reveal
+      >
+        <a href="mailto:matyas@socialmaty.cz" className="hover:text-ink">
+          Kontakt
+        </a>
+        <a href="/obchodni-podminky" className="hover:text-ink">
+          Obchodní podmínky
+        </a>
+        <a href="/ochrana-soukromi" className="hover:text-ink">
+          Ochrana soukromí
+        </a>
       </div>
     </div>
   );
 }
 
-function ItemLink({ item }: { item: Item }) {
+function ItemCard({ item }: { item: Item }) {
   const inner = (
-    <div className="flex items-center justify-between gap-4 py-5">
-      <div className="flex-1 min-w-0">
-        {item.badge && (
-          <span className="inline-block font-mono text-[10px] uppercase tracking-[0.18em] text-accent-700 mb-1.5">
-            {item.badge}
-          </span>
-        )}
-        <p className="font-display font-semibold leading-tight">{item.title}</p>
-        <p className="mt-1 text-sm text-muted leading-snug">{item.description}</p>
+    <div className="surface-card group p-5 transition hover:border-accent/40 hover:shadow-[0_0_40px_rgba(0,209,65,0.08)]">
+      <div className="flex items-center justify-between gap-3">
+        <span className="text-[10px] font-semibold tracking-widest text-accent uppercase">
+          {item.badge}
+        </span>
+        <span className="text-xs font-semibold text-ink">{item.price}</span>
       </div>
-      <span className="font-mono text-sm text-ink whitespace-nowrap">
-        {item.price ?? "→"}
-      </span>
+      <p className="mt-3 font-bold text-lg leading-tight">{item.title}</p>
+      <p className="mt-1.5 text-sm text-muted leading-snug">{item.description}</p>
+      <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-ink">
+        <span>Otevřít</span>
+        <ArrowRight size={16} />
+      </div>
     </div>
   );
 
   if (item.external) {
     return (
-      <a
-        href={item.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block group hover:bg-accent-50 -mx-2 px-2 transition"
-      >
+      <a href={item.href} target="_blank" rel="noopener noreferrer" className="block">
         {inner}
       </a>
     );
   }
   return (
-    <Link href={item.href} className="block group hover:bg-accent-50 -mx-2 px-2 transition">
+    <Link href={item.href} className="block">
       {inner}
     </Link>
   );

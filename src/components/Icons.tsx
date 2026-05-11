@@ -6,7 +6,7 @@ interface IconProps {
   stroke?: string;
 }
 
-export function ArrowRight({ size = 20, className, stroke = "#4ade80" }: IconProps) {
+export function ArrowRight({ size = 20, className, stroke = "#00d141" }: IconProps) {
   return (
     <svg
       width={size}
@@ -42,7 +42,7 @@ export function CheckCircle({ size = 20, className }: CheckCircleProps) {
       className={className}
       aria-hidden="true"
     >
-      <circle cx="12" cy="12" r="11" fill="#4ade80" />
+      <circle cx="12" cy="12" r="11" fill="#00d141" />
       <path
         d="M7.5 12.5l3 3 6-6.5"
         stroke="#0a120b"
