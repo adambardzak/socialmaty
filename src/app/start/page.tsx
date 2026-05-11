@@ -28,7 +28,7 @@ const items: Item[] = [
     price: "Zdarma",
   },
   {
-    href: "/trenink",
+    href: "https://projektorganika.cz/",
     badge: "Placený kurz",
     title: "Projekt Organika",
     subtitle: "3denní online trénink",
