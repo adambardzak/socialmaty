@@ -13,6 +13,7 @@ interface Item {
   href: string;
   badge: string;
   title: string;
+  subtitle?: string;
   description: string;
   price: string;
   external?: boolean;
@@ -31,6 +32,7 @@ const items: Item[] = [
     href: "/trenink",
     badge: "Placený kurz",
     title: "Projekt Organika",
+    subtitle: "3denní online trénink",
     description:
       "3 dny intenzivního tréninku · konkrétní výstupy · moje osobní zpětná vazba.",
     price: "697 Kč",
@@ -155,6 +157,9 @@ function ItemCard({ item }: { item: Item }) {
         <span className="text-xs font-semibold text-ink">{item.price}</span>
       </div>
       <p className="mt-3 font-bold text-lg leading-tight">{item.title}</p>
+      {item.subtitle && (
+        <p className="mt-1 text-sm font-medium text-accent">{item.subtitle}</p>
+      )}
       <p className="mt-1.5 text-sm text-muted leading-snug">{item.description}</p>
       <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-ink">
         <span>Otevřít</span>
