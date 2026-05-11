@@ -76,14 +76,14 @@ export default function CaseStudiesCarousel({ cases }: Props) {
             className="snap-start shrink-0 w-[78vw] max-w-[300px] surface-card overflow-hidden"
           >
             <div className="relative aspect-[9/16] bg-surface">
-              <Image src={c.before} alt={`${c.handle} – před`} fill className="object-contain" sizes="300px" />
+              <Image src={c.before} alt={`${c.handle} – před`} fill className="object-cover object-top" sizes="300px" />
               <span className="absolute top-2 left-2 badge bg-white/90">PŘED</span>
             </div>
             <div className="flex justify-center py-2 bg-accent-50">
               <NavArrowDown className="h-5 w-5 text-accent-700" aria-hidden />
             </div>
             <div className="relative aspect-[9/16] bg-surface">
-              <Image src={c.after} alt={`${c.handle} – po`} fill className="object-contain" sizes="300px" />
+              <Image src={c.after} alt={`${c.handle} – po`} fill className="object-cover object-top" sizes="300px" />
               <span className="absolute top-2 left-2 badge-accent">PO</span>
             </div>
             <div className="p-4 border-t border-line">
