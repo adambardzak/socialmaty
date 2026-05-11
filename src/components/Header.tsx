@@ -43,7 +43,7 @@ export default function Header({ urgency = true }: Props) {
             <Logo />
           </Link>
           <Link
-            href="/system"
+            href="/trenink#nabidka"
             className="hidden sm:inline-flex font-mono text-[11px] uppercase tracking-[0.16em] text-ink hover:text-accent-700"
           >
             Projekt Organika →

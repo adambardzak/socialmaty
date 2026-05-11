@@ -2,10 +2,11 @@
 
 Two-stage organic funnel for Matyáš Linda (socialmaty.cz):
 
-1. **Page #1** (`/`) — Opt-in for free 20-min training (collects name + email).
-2. **Page #2** (`/system`) — Free training video + sales page for Projekt Organika (697 Kč).
-3. **Page #3** (`/dekuji`) — Thank-you page with Circle invite onboarding.
-4. **`/start`** — Linktree-style hub with the value ladder.
+1. **`/`** — Redirects to `/start` (canonical landing for IG bio).
+2. **`/start`** — Linktree-style hub: free training (`/optin`) + projektorganika.cz.
+3. **`/optin`** — Opt-in for free 20-min training (collects name + email).
+4. **`/trenink`** — Free training video + sales page for Projekt Organika (697 Kč).
+5. **`/dekuji`** — Thank-you page with Circle invite onboarding.
 
 ## Stack
 
@@ -29,27 +30,23 @@ Open http://localhost:3000.
 ## Funnel flow
 
 ```
-Visitor → /  (opt-in) → POST /api/lead
-                         → Ecomail subscribe (tag: lead, trenink-zdarma)
-                         → redirect to /trenink?name=...&email=...
-                         → Ecomail automation fires: email with link to /trenink
+Visitor → /optin (opt-in form)
+       → POST /api/lead → Ecomail subscribe (tag: lead, trenink-zdarma)
+       → redirect to /trenink?name=...&email=...
+       → Ecomail automation also sends email with link as fallback
 
-         /trenink (free training video, no sales pitch)
-                         → soft Instagram CTA, no upsell
-                         → Ecomail follow-up email sequence may pitch /system later
+       /trenink (training video + full sales for Projekt Organika)
+       → click CTA → POST /api/checkout
+       → Stripe Checkout (697 Kč or 997 Kč after 100 sold)
 
-         /system (sales page for Projekt Organika — separate product)
-                         → click CTA → POST /api/checkout
-                         → Stripe Checkout (697 Kč or 997 Kč after 100 sold)
+       Stripe → POST /api/stripe-webhook (checkout.session.completed)
+       → Ecomail re-tag (buyer-organika, triggers welcome)
+       → Circle invite (community + space)
+       → KV increment sold counter
 
-         Stripe → POST /api/stripe-webhook (checkout.session.completed)
-                         → Ecomail re-tag (buyer-organika, triggers welcome)
-                         → Circle invite (community + space)
-                         → KV increment sold counter
-
-         Stripe success_url → /dekuji?session_id=...
-                         → verify session paid
-                         → show onboarding + Circle button
+       Stripe success_url → /dekuji?session_id=...
+       → verify session paid
+       → show onboarding + Circle button
 ```
 
 ### Ecomail email template

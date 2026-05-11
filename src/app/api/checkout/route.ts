@@ -52,7 +52,7 @@ export async function POST(req: Request) {
         leadName: body.name ?? "",
       },
       success_url: `${baseUrl}/dekuji?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${baseUrl}/system`,
+      cancel_url: `${baseUrl}/trenink#nabidka`,
     });
     return NextResponse.json({ url: session.url });
   } catch (err: any) {
