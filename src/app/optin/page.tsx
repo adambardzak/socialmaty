@@ -27,7 +27,8 @@ export default function OptinPage() {
             <h1 className="mt-4 font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
               <span className="block text-accent">GROWMAT SYSTÉM®:</span>{" "}
               Získej <span className="text-accent">+10 000 sledujících</span> a{" "}
-              <span className="text-accent">prvních 100 000</span> z Instagramu pomocí 5–8 sek. videí
+              <span className="text-accent">prvních 100 000</span> z Instagramu pomocí{" "}
+              <span className="text-accent">5–8 sek. videí</span>
             </h1>
             <p className="mt-4 font-display text-lg sm:text-2xl lg:text-2xl text-ink leading-snug">
               Bez agentury, reklamy, štěstí a jen s telefonem.
