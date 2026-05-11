@@ -25,7 +25,7 @@ export default function OptinPage() {
               className="mx-auto lg:mx-0 h-24 w-24 sm:h-28 sm:w-28 object-contain"
             />
             <h1 className="mt-4 font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
-              <span className="block text-accent">GROWMAT SYSTÉM®:</span>{" "}
+              <span className="block text-black">GROWMAT SYSTÉM®:</span>{" "}
               Získej <span className="text-accent">+10 000 sledujících</span> a{" "}
               <span className="text-accent">prvních 100 000</span> z Instagramu pomocí{" "}
               <span className="text-accent">5–8 sek. videí</span>
@@ -42,10 +42,10 @@ export default function OptinPage() {
             data-reveal-delay="1"
           >
             <h2 className="mt-2 font-display text-2xl font-bold leading-tight">
-              Pošlu ti přístup okamžitě.
+              Získej okamžitý přístup.
             </h2>
             <p className="mt-2 text-sm text-muted">
-              Vyplň jméno a email — odkaz na trénink ti přijde na email.
+              Vyplň jméno a email — odkaz na trénink ti přijde na email. (zkontroluj spam a hromadné)
             </p>
             <div className="mt-6">
               <LeadForm source="hero" />
@@ -55,7 +55,14 @@ export default function OptinPage() {
           {/* REST OF HERO COPY */}
           <div className="mt-10 lg:mt-8 lg:row-start-2 lg:col-start-1" data-reveal>
             <div className="rule" />
-            <p className="mt-8 text-lg text-muted leading-relaxed">
+            <Image
+              src="/trenink_screen.png"
+              alt="Ukázka tréninku zdarma"
+              width={1600}
+              height={900}
+              className="mt-8 w-full h-auto rounded-2xl border border-line"
+            />
+            <p className="mt-8 text-lg text-black leading-relaxed">
               20minutový trénink, ve kterém ti ukážu přesný systém, který v roce 2026
               funguje pro podnikatele napříč obory.
             </p>
