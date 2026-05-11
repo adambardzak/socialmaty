@@ -176,7 +176,6 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 3: HEADLINE NABIDKY */}
       <section id="nabidka" className="container-page py-20">
         <div className="max-w-3xl" data-reveal>
-          <p className="eyebrow">— Nabídka</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl font-extrabold leading-[1.05] tracking-tight">
             Projekt <span className="text-accent">Organika</span>
           </h2>
@@ -199,7 +198,6 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 4: TIER 2 SOCIAL PROOF — CASE STUDIES CAROUSEL */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20">
-          <p className="eyebrow text-center" data-reveal>— Výsledky členů</p>
           <h2
             className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
             data-reveal
@@ -273,7 +271,6 @@ export default function SystemPage({ searchParams }: PageProps) {
             <Image src="/sad.webp" alt="Pain" fill className="object-cover" sizes="280px" />
           </div>
           <div data-reveal data-reveal-delay="1">
-            <p className="eyebrow">— Pravdou je…</p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight">Tohle znáš, že?</h2>
             <ul className="mt-6 space-y-4 text-lg text-ink">
               <PainItem>
@@ -318,7 +315,6 @@ export default function SystemPage({ searchParams }: PageProps) {
         <div className="container-page py-20">
           <div className="grid md:grid-cols-[1fr_280px] gap-10 max-w-4xl items-start">
             <div data-reveal>
-              <p className="eyebrow">— Tohle můžeš být TY za 3 dny</p>
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight">
                 Identita, na kterou jsi <span className="text-accent">čekal</span>
               </h2>
@@ -347,7 +343,6 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 7: 3 DNY 3 VYSTUPY */}
       <section className="container-page py-20">
-        <p className="eyebrow" data-reveal>— Co konkrétně dostaneš</p>
         <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
           3 dny. <span className="text-accent">3 výstupy.</span>
         </h2>
@@ -404,7 +399,6 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 8: BONUSY */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20">
-          <p className="eyebrow" data-reveal>— + Co dostaneš navíc</p>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
             Bonusy v hodnotě <span className="text-accent">33 920 Kč</span>
           </h2>
@@ -447,7 +441,6 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 9: STACK UP */}
       <section className="container-page py-20">
         <div className="max-w-2xl mx-auto" data-reveal>
-          <p className="eyebrow text-center">— Co tohle stojí jinde</p>
           <div className="mt-6 border border-line bg-white p-6 sm:p-8 font-mono text-sm">
             {[
               ["Den 1 obsah", "2 990 Kč"],
@@ -474,7 +467,6 @@ export default function SystemPage({ searchParams }: PageProps) {
           </div>
 
           <div className="mt-10 text-center">
-            <p className="eyebrow">— Tvoje investice dnes</p>
             <p className="mt-3 font-display text-6xl sm:text-7xl font-extrabold text-accent">
               697 Kč
             </p>
@@ -494,7 +486,6 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 10: URGENCY (osobní feedback) */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20 max-w-2xl">
-          <p className="eyebrow" data-reveal>— ⏰ Urgency</p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight" data-reveal>
             Proč prvních 100 míst <span className="text-accent">za 697 Kč?</span>
           </h2>
@@ -520,7 +511,6 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 11: TIER 1 SOCIAL PROOF — RECENZE MASONRY */}
       <section className="container-page py-20">
-        <p className="eyebrow text-center" data-reveal>— Slovo členů</p>
         <h2
           className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
           data-reveal
@@ -546,7 +536,6 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 11b: ORIGIN STORY */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20 max-w-3xl">
-          <p className="eyebrow" data-reveal>— Kdo Ti to bude předávat</p>
           <div className="mt-6 grid sm:grid-cols-[200px_1fr] gap-8 items-start" data-reveal data-reveal-delay="1">
             <div className="aspect-square w-full overflow-hidden border border-line bg-white relative">
               <Image src="/img/maty.webp" alt="Matyáš Linda" fill className="object-cover" sizes="200px" />
@@ -566,7 +555,6 @@ export default function SystemPage({ searchParams }: PageProps) {
           </div>
 
           <div className="mt-10 border border-line bg-white p-6 font-mono text-sm">
-            <p className="eyebrow mb-3">— Systém, co nese výsledky</p>
             {[
               ["6 účtů", "z 0 na 10 000+ sledujících"],
               ["30 000 000+", "organických zhlédnutí"],
@@ -596,7 +584,6 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 12: GARANCE */}
       <section className="container-page py-20 max-w-3xl">
-        <p className="eyebrow" data-reveal>— Garance</p>
         <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
           Co když u mě <span className="text-accent">nezafunguje?</span>
         </h2>
@@ -624,7 +611,6 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 13: PRO KOHO TO NENI */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20 max-w-3xl">
-          <p className="eyebrow" data-reveal>— Pro koho to není</p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight" data-reveal>
             Tohle není pro každého
           </h2>
@@ -653,7 +639,6 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 14: FAQ */}
       <section id="faq" className="container-page py-20 max-w-3xl">
-        <p className="eyebrow" data-reveal>— FAQ</p>
         <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
           Nejčastější otázky
         </h2>
@@ -704,20 +689,17 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 15: 2 MOZNOSTI */}
       <section className="border-t border-line bg-surface">
         <div className="container-page py-20 max-w-3xl">
-          <p className="eyebrow" data-reveal>— Close</p>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
             Máš <span className="text-accent">2 možnosti</span>:
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             <div className="border border-line bg-white p-6" data-reveal>
-              <p className="eyebrow">— Možnost 1</p>
               <p className="mt-3 text-muted leading-relaxed">
                 Zavřeš stránku. Za měsíc tu budeš zase. Hledat další kurz, další strategii. A
                 pořád si říkat: <em>„Co dělám špatně?“</em>
               </p>
             </div>
             <div className="border border-accent bg-accent-50 p-6" data-reveal data-reveal-delay="1">
-              <p className="eyebrow text-accent-700">— Možnost 2</p>
               <p className="mt-3 text-ink leading-relaxed">
                 Vstoupíš teď. Za 3 dny máš profil. Máš první video. Máš systém na 14 dní
                 obsahu. A přístup ke mně, na celý život.
@@ -739,7 +721,6 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 16: P.S. */}
       <section className="container-page py-20 max-w-3xl">
-        <p className="eyebrow" data-reveal>— P.S.</p>
         <p className="mt-5 text-lg text-ink leading-relaxed" data-reveal>
           Většina lidí, co dosledovala video až sem, zavře stránku. Přečtou ještě pár recenzí.
           Možná otevřou konkurenční kurz. A za týden zapomenou, že tu kdy byli.

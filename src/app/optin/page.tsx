@@ -38,7 +38,6 @@ export default function OptinPage() {
               organických zhlédnutí klientů.
             </p>
 
-            <p className="mt-8 eyebrow">— V tréninku zdarma se dozvíš:</p>
             <ul className="mt-4 space-y-3" data-reveal data-reveal-delay="1">
               {[
                 <>
@@ -96,7 +95,6 @@ export default function OptinPage() {
             data-reveal
             data-reveal-delay="1"
           >
-            <p className="eyebrow">— Vstup do tréninku zdarma</p>
             <h2 className="mt-2 font-display text-2xl font-bold leading-tight">
               Pošlu ti přístup okamžitě.
             </h2>
@@ -113,9 +111,6 @@ export default function OptinPage() {
       {/* SOCIAL PROOF STRIP */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-12">
-          <p className="eyebrow text-center" data-reveal>
-            — Systém Growmat stojí za výsledky
-          </p>
           <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center" data-reveal>
             <Stat value="6" label="účtů z 0 na 10 000+ sledujících" />
             <Stat value="30M+" label="organických zhlédnutí" />
@@ -141,9 +136,6 @@ export default function OptinPage() {
 
       {/* CO SE V TRENINKU NAUCIS — 3 bloky */}
       <section className="container-page py-20">
-        <p className="eyebrow text-center" data-reveal>
-          — Co odneseš za 20 minut
-        </p>
         <h2
           className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
           data-reveal
@@ -189,7 +181,6 @@ export default function OptinPage() {
               />
             </div>
             <div>
-              <p className="eyebrow">— Kdo Ti to bude předávat</p>
               <h3 className="mt-2 font-display text-2xl font-bold">Matyáš Linda</h3>
               <p className="mt-3 text-muted leading-relaxed">
                 Zakladatel Growmat Academy. Za poslední rok postavil 6 účtů z 0 na 10 000+
@@ -217,7 +208,6 @@ export default function OptinPage() {
       {/* FINAL CTA */}
       <section className="container-page py-20">
         <div className="max-w-xl mx-auto text-center" data-reveal>
-          <p className="eyebrow">— Připraven začít?</p>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold leading-tight">
             Trénink je dostupný{" "}
             <span className="text-accent">ihned po přihlášení</span>.

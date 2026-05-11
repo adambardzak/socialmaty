@@ -40,7 +40,6 @@ export default function DekujiPage() {
             />
           </div>
           <div>
-            <p className="eyebrow">— Krátká zpráva od Matyho</p>
             <div className="mt-4 flex items-center gap-4">
               <div className="relative h-16 w-16 overflow-hidden border-2 border-ink shrink-0">
                 <Image
@@ -65,7 +64,6 @@ export default function DekujiPage() {
 
         {/* Next steps */}
         <div className="mt-12 surface-card p-6 sm:p-8" data-reveal>
-          <p className="eyebrow">— Co se teď stane</p>
           <ol className="mt-4 space-y-4">
             <Step
               n={1}
