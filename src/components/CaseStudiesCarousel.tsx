@@ -108,7 +108,7 @@ export default function CaseStudiesCarousel({ cases }: Props) {
                     className="w-full block"
                   />
                 </div>
-                <div className="w-full p-4 border border-line bg-white">
+                <div className="rounded-2xl w-full p-4 border border-line bg-white">
                   <p className="font-mono text-[11px] text-muted">{c.handle}</p>
                   <p className="mt-1 font-display font-bold text-accent-700 leading-tight">
                     {c.result}

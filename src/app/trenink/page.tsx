@@ -244,7 +244,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             />
           </div>
 
-          <div className="mt-10 max-w-2xl mx-auto border border-line bg-white p-6">
+          <div className="rounded-2xl mt-10 max-w-2xl mx-auto border border-line bg-white p-6">
             <p className="text-sm text-muted">
               🔒{" "}
               <strong className="text-ink">
@@ -266,7 +266,7 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 5: PAIN AGITATION */}
       <section className="container-page py-20">
         <div className="grid md:grid-cols-[280px_1fr] gap-10 max-w-4xl items-start">
-          <div className="aspect-[4/5] relative w-full overflow-hidden border border-line bg-surface" data-reveal>
+          <div className="rounded-2xl aspect-[4/5] relative w-full overflow-hidden border border-line bg-surface" data-reveal>
             <Image src="/sad.webp" alt="Pain" fill className="object-cover" sizes="280px" />
           </div>
           <div data-reveal data-reveal-delay="1">
@@ -325,7 +325,7 @@ export default function SystemPage({ searchParams }: PageProps) {
                   "Přestaneš tipovat a začneš tvořit s jistotou.",
                 ].map((t) => (
                   <li key={t} className="flex gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center bg-accent text-white text-xs font-bold">
+                    <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center bg-accent text-white text-xs font-bold rounded-lg">
                       ✓
                     </span>
                     <span>{t}</span>
@@ -333,7 +333,7 @@ export default function SystemPage({ searchParams }: PageProps) {
                 ))}
               </ul>
             </div>
-            <div className="aspect-[4/5] relative w-full overflow-hidden border border-line bg-white order-first md:order-last" data-reveal data-reveal-delay="1">
+            <div className="rounded-2xl aspect-[4/5] relative w-full overflow-hidden border border-line bg-white order-first md:order-last" data-reveal data-reveal-delay="1">
               <Image src="/happy.webp" alt="Transformace" fill className="object-cover" sizes="280px" />
             </div>
           </div>
@@ -347,7 +347,7 @@ export default function SystemPage({ searchParams }: PageProps) {
         </h2>
 
         <div className="mt-10 grid md:grid-cols-[300px_1fr] gap-12 items-start">
-          <div className="relative aspect-[4/5] border border-line bg-surface overflow-hidden" data-reveal>
+          <div className="rounded-2xl relative aspect-[4/5] border border-line bg-surface overflow-hidden" data-reveal>
             <Image
               src="/img/grafika/mockup.webp"
               alt="Projekt Organika mockup"
@@ -440,7 +440,7 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 9: STACK UP */}
       <section className="container-page py-20">
         <div className="max-w-2xl mx-auto" data-reveal>
-          <div className="mt-6 border border-line bg-white p-6 sm:p-8 font-mono text-sm">
+          <div className="rounded-2xl mt-6 border border-line bg-white p-6 sm:p-8 font-mono text-sm">
             {[
               ["Den 1 obsah", "2 990 Kč"],
               ["Den 2 obsah", "2 990 Kč"],
@@ -518,7 +518,7 @@ export default function SystemPage({ searchParams }: PageProps) {
         </h2>
         <div className="mt-10 columns-1 sm:columns-2 md:columns-3 gap-4 [column-fill:_balance]" data-reveal>
           {reviews.map((src) => (
-            <div key={src} className="mb-4 break-inside-avoid border border-line bg-white">
+            <div key={src} className="rounded-2xl mb-4 break-inside-avoid border border-line bg-white">
               <Image
                 src={src}
                 alt="Recenze člena"
@@ -536,7 +536,7 @@ export default function SystemPage({ searchParams }: PageProps) {
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20 max-w-3xl">
           <div className="mt-6 grid sm:grid-cols-[200px_1fr] gap-8 items-start" data-reveal data-reveal-delay="1">
-            <div className="aspect-square w-full overflow-hidden border border-line bg-white relative">
+            <div className="rounded-2xl aspect-square w-full overflow-hidden border border-line bg-white relative">
               <Image src="/img/maty.webp" alt="Matyáš Linda" fill className="object-cover" sizes="200px" />
             </div>
             <div>
@@ -553,7 +553,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             </div>
           </div>
 
-          <div className="mt-10 border border-line bg-white p-6 font-mono text-sm">
+          <div className="rounded-2xl mt-10 border border-line bg-white p-6 font-mono text-sm">
             {[
               ["6 účtů", "z 0 na 10 000+ sledujících"],
               ["30 000 000+", "organických zhlédnutí"],
@@ -692,13 +692,13 @@ export default function SystemPage({ searchParams }: PageProps) {
             Máš <span className="text-accent">2 možnosti</span>:
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-6">
-            <div className="border border-line bg-white p-6" data-reveal>
+            <div className="rounded-2xl border border-line bg-white p-6" data-reveal>
               <p className="mt-3 text-muted leading-relaxed">
                 Zavřeš stránku. Za měsíc tu budeš zase. Hledat další kurz, další strategii. A
                 pořád si říkat: <em>„Co dělám špatně?“</em>
               </p>
             </div>
-            <div className="border border-accent bg-accent-50 p-6" data-reveal data-reveal-delay="1">
+            <div className="rounded-2xl border border-accent bg-accent-50 p-6" data-reveal data-reveal-delay="1">
               <p className="mt-3 text-ink leading-relaxed">
                 Vstoupíš teď. Za 3 dny máš profil. Máš první video. Máš systém na 14 dní
                 obsahu. A přístup ke mně, na celý život.
@@ -766,7 +766,7 @@ function Member({
   note: string;
 }) {
   return (
-    <div className="border border-line bg-white p-6" data-reveal>
+    <div className="rounded-2xl border border-line bg-white p-6" data-reveal>
       <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-accent-700">{tag}</p>
       <p className="mt-3 font-display text-xl font-bold leading-snug">{headline}</p>
       <p className="mt-3 text-ink">{body}</p>
@@ -817,7 +817,7 @@ function Bonus({
   body: string;
 }) {
   return (
-    <div className="border border-line bg-white p-5" data-reveal>
+    <div className="rounded-2xl border border-line bg-white p-5" data-reveal>
       <div className="flex items-start justify-between gap-3">
         <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
           Bonus · {n}

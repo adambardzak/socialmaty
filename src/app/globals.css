@@ -72,31 +72,31 @@ body {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-3.5 font-display font-semibold tracking-tight transition hover:bg-accent-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-300 disabled:opacity-60 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent text-white px-6 py-3.5 font-display font-semibold tracking-tight transition hover:bg-accent-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-300 disabled:opacity-60 disabled:cursor-not-allowed;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 border border-ink text-ink px-6 py-3.5 font-display font-semibold tracking-tight transition hover:bg-ink hover:text-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-ink text-ink px-6 py-3.5 font-display font-semibold tracking-tight transition hover:bg-ink hover:text-white;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 border border-ink/15 text-ink px-5 py-3 font-display font-medium tracking-tight transition hover:border-ink;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-ink/15 text-ink px-5 py-3 font-display font-medium tracking-tight transition hover:border-ink;
   }
 
   .badge {
-    @apply inline-flex items-center gap-2 border border-ink/15 bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-ink;
+    @apply inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-ink;
   }
 
   .badge-accent {
-    @apply inline-flex items-center gap-2 border border-accent/30 bg-accent-50 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-accent-700;
+    @apply inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent-50 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-accent-700;
   }
 
   .surface-card {
-    @apply border border-line bg-white;
+    @apply rounded-2xl border border-line bg-white;
   }
 
   .input-field {
-    @apply w-full border border-ink/15 bg-white px-4 py-3 text-ink placeholder:text-muted focus:outline-none focus:border-ink transition;
+    @apply w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-ink placeholder:text-muted focus:outline-none focus:border-ink transition;
   }
 
   .text-accent-grad {

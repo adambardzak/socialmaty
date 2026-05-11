@@ -42,7 +42,7 @@ export default function StartPage() {
     <div className="container-page max-w-md py-10">
       {/* Profile */}
       <div className="flex flex-col items-center text-center" data-reveal>
-        <div className="relative h-24 w-24 overflow-hidden border-2 border-ink">
+        <div className="relative h-24 w-24 overflow-hidden rounded-full border-2 border-ink">
           <Image
             src="/img/maty.webp"
             alt="Matyáš Linda"

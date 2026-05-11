@@ -49,7 +49,7 @@ export default function OptinPage() {
                 </>,
               ].map((b, i) => (
                 <li key={i} className="flex gap-3 text-ink">
-                  <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center bg-accent text-white text-xs font-bold">
+                  <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center bg-accent text-white text-xs font-bold rounded-lg">
                     ✓
                   </span>
                   <span>{b}</span>
@@ -168,7 +168,7 @@ export default function OptinPage() {
             className="grid md:grid-cols-[260px_1fr] gap-10 items-center max-w-3xl mx-auto"
             data-reveal
           >
-            <div className="aspect-square w-full overflow-hidden border border-line bg-surface relative">
+            <div className="rounded-2xl aspect-square w-full overflow-hidden border border-line bg-surface relative">
               <Image
                 src="/img/maty.webp"
                 alt="Matyáš Linda"

@@ -4,7 +4,7 @@ export default function Footer() {
     <footer className="mt-24 border-t border-line bg-white">
       <div className="container-page py-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-8 w-8 items-center justify-center bg-accent text-white font-display font-bold">
+          <span className="inline-flex h-8 w-8 items-center justify-center bg-accent text-white font-display font-bold rounded-lg">
             S
           </span>
           <div>

@@ -40,7 +40,7 @@ export default function DekujiPage() {
           </div>
           <div>
             <div className="mt-4 flex items-center gap-4">
-              <div className="relative h-16 w-16 overflow-hidden border-2 border-ink shrink-0">
+              <div className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-ink shrink-0">
                 <Image
                   src="/img/maty.webp"
                   alt="Matyáš Linda"
@@ -103,7 +103,7 @@ export default function DekujiPage() {
 function Step({ n, title, body }: { n: number; title: string; body: string }) {
   return (
     <li className="flex gap-4">
-      <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center bg-accent text-white font-display font-bold text-sm">
+      <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center bg-accent text-white font-display font-bold text-sm rounded-lg">
         {n}
       </span>
       <div>
