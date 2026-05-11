@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/components/Logo";
 import { ArrowRight, CheckCircle, Star } from "@/components/Icons";
 
 export const metadata = {
@@ -42,13 +41,8 @@ const items: Item[] = [
 export default function StartPage() {
   return (
     <div className="container-page max-w-md py-10">
-      {/* Wordmark */}
-      <div className="flex justify-center" data-reveal>
-        <Logo size="sm" />
-      </div>
-
       {/* Profile */}
-      <div className="mt-10 flex flex-col items-center text-center" data-reveal>
+      <div className="flex flex-col items-center text-center" data-reveal>
         <div className="relative h-24 w-24 overflow-hidden rounded-full border border-line">
           <Image
             src="/img/maty.webp"
