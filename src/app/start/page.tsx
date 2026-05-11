@@ -19,7 +19,7 @@ interface Item {
 
 const items: Item[] = [
   {
-    href: "/trenink",
+    href: "/optin",
     badge: "ZDARMA · TRÉNINK",
     title: "Jak získat +10K sledujících za 90 dní",
     price: "Zdarma →",
@@ -27,25 +27,12 @@ const items: Item[] = [
       "27 min trénink. Konkrétní systém 5–8 sek. videí, který nasbíral 30M+ organických zhlédnutí.",
   },
   {
-    href: "/system",
-    badge: "697 KČ · 3 DNY",
+    href: "https://projektorganika.cz",
+    badge: "PLACENÝ KURZ",
     title: "Projekt Organika",
-    price: "697 Kč →",
+    price: "→",
     description:
-      "3 dny intenzivního tréninku · konkrétní výstupy · moje osobní zpětná vazba. Prvních 100 míst.",
-  },
-  {
-    href: "/system#faq",
-    badge: "KOMUNITA",
-    title: "Growmat komunita (Circle)",
-    price: "V ceně",
-    description: "Soukromá komunita absolventů Organiky. Přístup automaticky po koupi.",
-  },
-  {
-    href: "https://instagram.com/socialmaty",
-    badge: "INSTAGRAM",
-    title: "@socialmaty — denně nové insighty",
-    description: "Krátké video tipy, jak růst na IG v roce 2026.",
+      "3 dny intenzivního tréninku · konkrétní výstupy · moje osobní zpětná vazba.",
     external: true,
   },
 ];
