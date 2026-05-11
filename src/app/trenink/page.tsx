@@ -107,8 +107,17 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 1: HERO + VIDEO */}
       <section className="container-page pt-16 pb-12">
+        <Image
+          src="/growmat_logo.png"
+          alt="Growmat Systém®"
+          width={720}
+          height={200}
+          priority
+          className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
+          data-reveal
+        />
         <h1
-          className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight"
+          className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight sr-only"
           data-reveal
         >
           Growmat Systém®
