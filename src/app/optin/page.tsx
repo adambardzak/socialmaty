@@ -13,8 +13,9 @@ export default function OptinPage() {
     <>
       {/* HERO + OPTIN */}
       <section className="container-page pt-16 pb-20">
-        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
-          <div data-reveal>
+        <div className="lg:grid lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:items-start">
+          {/* HEADLINE */}
+          <div data-reveal className="lg:row-start-1 lg:col-start-1">
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
               <span className="text-accent">GROWMAT® SYSTÉM:</span> Získej +10 000
               sledujících a první prodeje z Instagramu pomocí 5–8 sek. videí
@@ -22,7 +23,28 @@ export default function OptinPage() {
             <p className="mt-5 font-display text-xl sm:text-2xl text-ink leading-snug">
               Bez agentury, reklamy, štěstí a jen s telefonem.
             </p>
-            <div className="rule mt-8" />
+          </div>
+
+          {/* FORM CARD — on mobile shows right after headline; on desktop sits in right column and spans both rows */}
+          <div
+            className="mt-8 lg:mt-0 lg:sticky lg:top-10 lg:row-span-2 lg:row-start-1 lg:col-start-2 surface-card p-6 sm:p-8"
+            data-reveal
+            data-reveal-delay="1"
+          >
+            <h2 className="mt-2 font-display text-2xl font-bold leading-tight">
+              Pošlu ti přístup okamžitě.
+            </h2>
+            <p className="mt-2 text-sm text-muted">
+              Vyplň jméno a email — odkaz na trénink ti přijde na email.
+            </p>
+            <div className="mt-6">
+              <LeadForm source="hero" />
+            </div>
+          </div>
+
+          {/* REST OF HERO COPY */}
+          <div className="mt-10 lg:mt-8 lg:row-start-2 lg:col-start-1" data-reveal>
+            <div className="rule" />
             <p className="mt-8 text-lg text-muted leading-relaxed">
               20minutový trénink, ve kterém ti ukážu přesný systém, který v roce 2026
               funguje pro podnikatele napříč obory.
@@ -80,23 +102,6 @@ export default function OptinPage() {
                 <span className="text-accent-700 font-semibold">★★★★★</span> 50+ expertů
                 a podnikatelů ve hře
               </p>
-            </div>
-          </div>
-
-          {/* FORM CARD */}
-          <div
-            className="lg:sticky lg:top-28 surface-card p-6 sm:p-8"
-            data-reveal
-            data-reveal-delay="1"
-          >
-            <h2 className="mt-2 font-display text-2xl font-bold leading-tight">
-              Pošlu ti přístup okamžitě.
-            </h2>
-            <p className="mt-2 text-sm text-muted">
-              Vyplň jméno a email — odkaz na trénink ti přijde na email.
-            </p>
-            <div className="mt-6">
-              <LeadForm source="hero" />
             </div>
           </div>
         </div>
