@@ -22,7 +22,7 @@ const items: Item[] = [
   {
     href: "/optin",
     badge: "Trénink zdarma",
-    title: "Jak získat +10K sledujících za 90 dní",
+    title: "Získej +10 000 sledujících a prvních 100 000 Kč z Instagramu pomocí 5–8 sek. videí",
     description:
       "27 min trénink. Konkrétní systém 5–8 sek. videí, který nasbíral 30M+ organických zhlédnutí.",
     price: "Zdarma",
@@ -61,9 +61,7 @@ export default function StartPage() {
           Matyáš Linda
           <CheckCircle size={20} />
         </h1>
-        <p className="mt-1 text-sm text-muted">
-          Zakladatel Growmat Academy · 30M+ organických zhlédnutí
-        </p>
+        <p className="mt-1 text-sm text-muted">Zakladatel Growmat Academy</p>
       </div>
 
       {/* Experts pill */}
