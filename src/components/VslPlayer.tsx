@@ -19,7 +19,7 @@ interface Props {
 function PlayBadge() {
   return (
     <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-      <span className="absolute h-24 w-24 sm:h-28 sm:w-28 rounded-full bg-accent/30 animate-ping" />
+      <span className="absolute h-24 w-24 sm:h-28 sm:w-28 rounded-full bg-accent/30" />
       <span className="relative flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-700 shadow-[0_0_60px_rgba(0,209,65,0.45)]">
         <svg
           width="32"
@@ -27,7 +27,7 @@ function PlayBadge() {
           viewBox="0 0 24 24"
           fill="white"
           aria-hidden="true"
-          className="ml-1.5"
+          className=""
         >
           <path d="M8 5v14l11-7L8 5z" />
         </svg>

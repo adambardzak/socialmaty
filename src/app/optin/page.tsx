@@ -13,9 +13,9 @@ export default function OptinPage() {
     <>
       {/* HERO + OPTIN */}
       <section className="container-page pt-16 pb-20">
-        <div className="lg:grid lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:items-start">
+        <div className="lg:grid lg:grid-cols-[1fr_1.2fr] lg:gap-16 lg:items-start">
           {/* HEADLINE */}
-          <div data-reveal className="text-center lg:text-left lg:row-start-1 lg:col-start-1">
+          <div data-reveal className="text-center lg:text-left lg:row-start-1 lg:col-start-2">
             <Image
               src="/growik.png"
               alt="Growmat maskot"
@@ -37,7 +37,7 @@ export default function OptinPage() {
 
           {/* FORM CARD — on mobile shows right after headline; on desktop sits in right column and spans both rows */}
           <div
-            className="mt-8 lg:mt-0 lg:sticky lg:top-10 lg:row-span-2 lg:row-start-1 lg:col-start-2 surface-card p-6 sm:p-8"
+            className="mt-8 lg:mt-0 lg:sticky lg:top-10 lg:row-span-2 lg:row-start-1 lg:col-start-1 surface-card p-6 sm:p-8"
             data-reveal
             data-reveal-delay="1"
           >
@@ -53,7 +53,7 @@ export default function OptinPage() {
           </div>
 
           {/* REST OF HERO COPY */}
-          <div className="mt-10 lg:mt-8 lg:row-start-2 lg:col-start-1" data-reveal>
+          <div className="mt-10 lg:mt-8 lg:row-start-2 lg:col-start-2" data-reveal>
             <div className="rule" />
             <Image
               src="/trenink_screen.png"
