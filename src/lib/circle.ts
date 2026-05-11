@@ -1,30 +1,21 @@
 /**
- * Circle.so integration — invite buyer to community space.
- * Docs: https://api.circle.so/
+ * Circle.so integration — add member to a space (Growmat Academy).
+ * Uses admin v2 API (same as projektorganika).
  *
- * We use the v1 admin API:
- *  POST /api/v1/community_members  -> creates member (sends invite email)
- *  POST /api/v1/space_members      -> adds member to specific space
+ *  POST {communityUrl}/api/admin/v2/community_members
+ *  body: { email, name, space_ids: number[], send_invitation_email: true }
  */
 
-const CIRCLE_BASE = "https://app.circle.so/api/v1";
+const DEFAULT_CIRCLE_COMMUNITY_URL = "https://growmatacademy.circle.so";
 
-function getToken() {
-  const token = process.env.CIRCLE_API_TOKEN;
-  if (!token) console.warn("[circle] CIRCLE_API_TOKEN not set – skipping invite");
-  return token;
-}
-
-function getCommunityId() {
-  const id = process.env.CIRCLE_COMMUNITY_ID;
-  if (!id) console.warn("[circle] CIRCLE_COMMUNITY_ID not set");
-  return id;
-}
-
-function getSpaceId() {
-  const id = process.env.CIRCLE_SPACE_ID;
-  if (!id) console.warn("[circle] CIRCLE_SPACE_ID not set");
-  return id;
+function parseSpaceIds(raw: string | undefined): number[] {
+  if (!raw) return [];
+  return raw
+    .split(",")
+    .map((v) => v.trim())
+    .filter(Boolean)
+    .map((v) => Number(v))
+    .filter((n) => Number.isInteger(n) && n > 0);
 }
 
 export interface CircleInvitePayload {
@@ -33,53 +24,44 @@ export interface CircleInvitePayload {
 }
 
 export async function circleInviteToOrganika(payload: CircleInvitePayload): Promise<boolean> {
-  const token = getToken();
-  const communityId = getCommunityId();
-  const spaceId = getSpaceId();
-  if (!token || !communityId) return false;
+  const token = process.env.CIRCLE_API_TOKEN;
+  const communityUrl =
+    process.env.CIRCLE_COMMUNITY_URL || DEFAULT_CIRCLE_COMMUNITY_URL;
+  const spaceIds = parseSpaceIds(process.env.CIRCLE_SPACE_IDS);
+
+  if (!token) {
+    console.warn("[circle] CIRCLE_API_TOKEN not set – skipping invite");
+    return false;
+  }
+  if (spaceIds.length === 0) {
+    console.warn("[circle] CIRCLE_SPACE_IDS not set – skipping invite");
+    return false;
+  }
+
+  const baseUrl = communityUrl.replace(/\/+$/, "");
+  const fullName = payload.name ?? payload.email.split("@")[0];
 
   try {
-    // 1) Create or upsert community member
-    const memberRes = await fetch(`${CIRCLE_BASE}/community_members`, {
+    const res = await fetch(`${baseUrl}/api/admin/v2/community_members`, {
       method: "POST",
       headers: {
-        Authorization: `Token ${token}`,
+        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         email: payload.email,
-        name: payload.name ?? payload.email.split("@")[0],
-        community_id: communityId,
-        skip_invitation: false,
+        name: fullName,
+        space_ids: spaceIds,
+        send_invitation_email: true,
       }),
+      cache: "no-store",
     });
 
-    if (!memberRes.ok && memberRes.status !== 422) {
-      // 422 = already exists, that's fine
-      const text = await memberRes.text().catch(() => "");
-      console.error("[circle] member create failed", memberRes.status, text);
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      console.error("[circle] member create failed", res.status, text);
+      return false;
     }
-
-    // 2) Add to space (Projekt Organika)
-    if (spaceId) {
-      const spaceRes = await fetch(`${CIRCLE_BASE}/space_members`, {
-        method: "POST",
-        headers: {
-          Authorization: `Token ${token}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: payload.email,
-          space_id: spaceId,
-          community_id: communityId,
-        }),
-      });
-      if (!spaceRes.ok && spaceRes.status !== 422) {
-        const text = await spaceRes.text().catch(() => "");
-        console.error("[circle] space add failed", spaceRes.status, text);
-      }
-    }
-
     return true;
   } catch (err) {
     console.error("[circle] invite error", err);

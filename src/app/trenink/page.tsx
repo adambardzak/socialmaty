@@ -1,6 +1,5 @@
 import Image from "next/image";
 import CheckoutButton from "@/components/CheckoutButton";
-import SpotsCounter from "@/components/SpotsCounter";
 import VslPlayer from "@/components/VslPlayer";
 import FAQ from "@/components/FAQ";
 import Header from "@/components/Header";
@@ -492,7 +491,7 @@ export default function SystemPage({ searchParams }: PageProps) {
         </div>
       </section>
 
-      {/* SECTION 10: COUNTER + URGENCY */}
+      {/* SECTION 10: URGENCY (osobní feedback) */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20 max-w-2xl">
           <p className="eyebrow" data-reveal>— ⏰ Urgency</p>
@@ -509,10 +508,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             konkrétní obsah. Při větším objemu to fyzicky nezvládnu udržet v kvalitě, kterou
             považuji za standard.
           </p>
-          <div className="mt-8" data-reveal data-reveal-delay="1">
-            <SpotsCounter />
-          </div>
-          <div className="mt-6">
+          <div className="mt-8 max-w-md">
             <CheckoutButton
               prefill={prefill}
               label="Chci jedno z posledních míst →"
@@ -694,7 +690,7 @@ export default function SystemPage({ searchParams }: PageProps) {
               },
               {
                 q: "Mohu dostat fakturu na firmu?",
-                a: "Ano. Stripe ti automaticky vystaví fakturu po platbě.",
+                a: "Ano. Po platbě ti automaticky přijde faktura na e-mail.",
               },
               {
                 q: "Co když to není pro mě?",

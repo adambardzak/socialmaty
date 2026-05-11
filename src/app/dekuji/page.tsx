@@ -1,46 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { redirect } from "next/navigation";
 import Logo from "@/components/Logo";
-import { getStripe } from "@/lib/stripe";
 
 export const metadata = {
   title: "Děkuji za platbu — Projekt Organika",
   robots: { index: false, follow: false },
 };
 
-interface PageProps {
-  searchParams?: { session_id?: string };
-}
-
-async function verifySession(sessionId: string | undefined) {
-  if (!sessionId) return null;
-  if (!process.env.STRIPE_SECRET_KEY) {
-    // dev fallback so the page works without keys
-    return { email: "test@example.com", name: "Test" };
-  }
-  try {
-    const stripe = getStripe();
-    const session = await stripe.checkout.sessions.retrieve(sessionId);
-    if (session.payment_status !== "paid") return null;
-    return {
-      email: session.customer_details?.email ?? session.customer_email ?? "",
-      name: session.customer_details?.name ?? "",
-    };
-  } catch (err) {
-    console.error("[dekuji] failed to retrieve session", err);
-    return null;
-  }
-}
-
-export default async function DekujiPage({ searchParams }: PageProps) {
-  const data = await verifySession(searchParams?.session_id);
-  if (!data && process.env.NODE_ENV === "production") {
-    redirect("/");
-  }
-
-  const circleUrl = process.env.NEXT_PUBLIC_CIRCLE_URL || "https://growmat.circle.so";
-  const firstName = (data?.name || "").split(" ")[0];
+export default function DekujiPage() {
+  const circleUrl = process.env.NEXT_PUBLIC_CIRCLE_URL || "https://growmatacademy.circle.so";
 
   return (
     <>
@@ -52,14 +20,11 @@ export default async function DekujiPage({ searchParams }: PageProps) {
         <div data-reveal>
           <p className="badge-accent">— Platba přijata · Vítej uvnitř</p>
           <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.05] tracking-tight">
-            {firstName ? `${firstName}, ` : ""}vítej v{" "}
-            <span className="text-accent">Projektu Organika</span>.
+            Vítej v <span className="text-accent">Projektu Organika</span>.
           </h1>
           <p className="mt-5 text-lg text-muted max-w-2xl">
             Právě jsi udělal/a největší krok pro svůj Instagram v roce 2026. Potvrzení
-            a fakturu jsem ti poslal na{" "}
-            <strong className="text-ink">{data?.email || "tvůj email"}</strong>.
-            Přístupy do Circle dorazí do pár minut.
+            a fakturu jsem ti poslal na e-mail. Přístupy do Circle dorazí do pár minut.
           </p>
         </div>
 

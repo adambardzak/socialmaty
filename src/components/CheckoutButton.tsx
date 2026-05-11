@@ -1,50 +1,29 @@
-"use client";
-
-import { useState } from "react";
-
 interface Props {
   label?: string;
   className?: string;
   /**
-   * Optional name/email passed via URL params (from Page #1) — Stripe pre-fills email.
+   * Optional prefill — kept for API compatibility with old call sites.
+   * Not used: Circle paywall handles checkout (email collected on its page).
    */
   prefill?: { name?: string; email?: string };
 }
 
+export const CIRCLE_CHECKOUT_URL =
+  process.env.NEXT_PUBLIC_CIRCLE_CHECKOUT_URL ||
+  "https://growmatacademy.circle.so/checkout/-projekt-organikar";
+
 export default function CheckoutButton({
   label = "Zajistit místo za 697 Kč →",
   className = "btn-primary w-full",
-  prefill,
 }: Props) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  async function onClick() {
-    setError(null);
-    setLoading(true);
-    try {
-      const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: prefill?.email, name: prefill?.name }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data?.url) {
-        throw new Error(data?.error || "Checkout se nepodařilo otevřít.");
-      }
-      window.location.href = data.url;
-    } catch (err: any) {
-      setError(err?.message ?? "Něco se pokazilo.");
-      setLoading(false);
-    }
-  }
-
   return (
-    <div className="flex flex-col gap-2">
-      <button onClick={onClick} disabled={loading} className={className}>
-        {loading ? "Otevírám platbu…" : label}
-      </button>
-      {error && <p className="text-sm text-red-600">{error}</p>}
-    </div>
+    <a
+      href={CIRCLE_CHECKOUT_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {label}
+    </a>
   );
 }

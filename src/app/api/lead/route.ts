@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { ecomailSubscribe } from "@/lib/ecomail";
+import { circleInviteToOrganika } from "@/lib/circle";
 
 export const runtime = "nodejs";
 
@@ -32,12 +33,16 @@ export async function POST(req: Request) {
   if (!body.consent)
     return NextResponse.json({ error: "Bez souhlasu nemůžeme kontakt uložit." }, { status: 400 });
 
+  // 1) Ecomail (socialmaty list — ECOMAIL_LIST_ID v env)
   await ecomailSubscribe({
     email,
     name,
     tags: ["lead", "trenink-zdarma", `source-${source}`],
     triggerAutoresponders: true,
   });
+
+  // 2) Circle (Growmat Academy — pozve do prostoru, pošle invite email)
+  await circleInviteToOrganika({ email, name });
 
   return NextResponse.json({ ok: true });
 }
