@@ -98,7 +98,6 @@ export default function CaseStudiesCarousel({ cases }: Props) {
                     loading="lazy"
                     className="w-full block"
                   />
-                  <span className="absolute top-2 left-2 badge bg-white/90">PŘED</span>
                 </div>
                 <NavArrowDown className="h-6 w-6 text-accent" aria-hidden />
                 <div className="w-full relative">
@@ -108,7 +107,6 @@ export default function CaseStudiesCarousel({ cases }: Props) {
                     loading="lazy"
                     className="w-full block"
                   />
-                  <span className="absolute top-2 left-2 badge-accent">PO</span>
                 </div>
                 <div className="w-full p-4 border border-line bg-white">
                   <p className="font-mono text-[11px] text-muted">{c.handle}</p>

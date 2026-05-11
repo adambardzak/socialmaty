@@ -109,7 +109,6 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 1: HERO + VIDEO */}
       <section className="container-page pt-32 pb-12">
-        <p className="badge-accent" data-reveal>— Trénink zdarma · 20 minut</p>
         <h1
           className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight"
           data-reveal

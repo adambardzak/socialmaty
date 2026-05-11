@@ -18,9 +18,6 @@ export default function OptinPage() {
       <section className="container-page pt-32 pb-20">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
           <div data-reveal>
-            <p className="badge-accent mb-6">
-              ⏰ Trénink zdarma · Dostupný okamžitě po přihlášení
-            </p>
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
               <span className="text-accent">GROWMAT® SYSTÉM:</span> Získej +10 000
               sledujících a první prodeje z Instagramu pomocí 5–8 sek. videí

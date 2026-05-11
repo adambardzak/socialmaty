@@ -18,7 +18,6 @@ export default function DekujiPage() {
 
       <section className="container-page py-16 max-w-4xl">
         <div data-reveal>
-          <p className="badge-accent">— Platba přijata · Vítej uvnitř</p>
           <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.05] tracking-tight">
             Vítej v <span className="text-accent">Projektu Organika</span>.
           </h1>
