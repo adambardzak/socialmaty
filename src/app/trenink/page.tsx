@@ -636,7 +636,7 @@ export default function SystemPage({ searchParams }: PageProps) {
               "Pokud čekáš, že to za Tebe udělá někdo jiný — tady to nedostaneš.",
             ].map((t) => (
               <li key={t} className="flex gap-3">
-                <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center bg-ink text-white text-xs font-bold">
+                <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-rose-600 text-xs font-bold">
                   ✕
                 </span>
                 <span>{t}</span>
@@ -761,7 +761,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 function PainItem({ children }: { children: React.ReactNode }) {
   return (
     <li className="flex gap-3">
-      <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center bg-ink text-white text-xs font-bold">
+      <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-rose-600 text-xs font-bold">
         ✕
       </span>
       <span>{children}</span>
