@@ -15,7 +15,7 @@ export default function OptinPage() {
       <section className="container-page pt-16 pb-20">
         <div className="lg:grid lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:items-start">
           {/* HEADLINE */}
-          <div data-reveal className="lg:row-start-1 lg:col-start-1">
+          <div data-reveal className="text-center lg:text-left lg:row-start-1 lg:col-start-1">
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
               <span className="text-accent">GROWMAT® SYSTÉM:</span> Získej +10 000
               sledujících a první prodeje z Instagramu pomocí 5–8 sek. videí
