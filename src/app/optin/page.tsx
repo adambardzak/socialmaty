@@ -125,7 +125,7 @@ export default function OptinPage() {
       </section>
 
       {/* SOCIAL PROOF STRIP */}
-      <section className="border-y border-line bg-surface">
+      {/* <section className="border-y border-line bg-surface">
         <div className="container-page py-12">
           <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center" data-reveal>
             <Stat value="6" label="účtů z 0 na 10 000+ sledujících" />
@@ -148,7 +148,7 @@ export default function OptinPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CO SE V TRENINKU NAUCIS — 3 bloky */}
       <section className="container-page py-20">
@@ -161,19 +161,19 @@ export default function OptinPage() {
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           <ValueBlock
             delay={1}
-            icon="🎯"
+            icon="1️⃣"
             title="Mechaniku, proč krátká videa vyhrávají v 2026"
             body="Pochopíš, co se změnilo na Instagramu za poslední rok. Proč 90 % tvůrců dělá videa špatně, i když to dělají správně podle starých pravidel."
           />
           <ValueBlock
             delay={2}
-            icon="🎯"
+            icon="2️⃣"
             title="Reálné případové studie s čísly"
             body="Ukážu ti konkrétní účty, konkrétní videa, konkrétní výsledky. Žádné grafy. Reálná čísla od reálných lidí, kteří aplikovali stejný systém."
           />
           <ValueBlock
             delay={3}
-            icon="🎯"
+            icon="3️⃣"
             title="Co dělat hned po skončení tréninku"
             body="Trénink není teorie. Ke konci ti dám konkrétní akční krok, který můžeš udělat ještě dnes — i kdybys nikdy nenatočil video."
           />

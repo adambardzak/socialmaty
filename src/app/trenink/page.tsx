@@ -127,7 +127,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             bunny={bunny}
             youtubeId={!bunny ? ytId : undefined}
             src={!bunny && !ytId ? videoSrc : undefined}
-            poster="/vsl-poster.webp"
+            poster="/video_cover.png"
             title="Growmat Systém®"
           />
           <p className="mt-4 text-sm text-muted">
