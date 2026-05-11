@@ -106,14 +106,14 @@ export default function SystemPage({ searchParams }: PageProps) {
       <StickyCta href="#nabidka" label="Vstoupit za 697 Kč" />
 
       {/* SECTION 1: HERO + VIDEO */}
-      <section className="container-page pt-16 pb-12">
+      <section className="container-page pt-16 pb-12 text-center">
         <Image
           src="/growmat_logo.png"
           alt="Growmat Systém®"
           width={720}
           height={200}
           priority
-          className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
+          className="mx-auto h-12 sm:h-14 lg:h-16 w-auto object-contain"
           data-reveal
         />
         <h1
@@ -123,15 +123,23 @@ export default function SystemPage({ searchParams }: PageProps) {
           Growmat Systém®
         </h1>
         <p
-          className="mt-4 max-w-3xl font-display text-xl sm:text-2xl text-ink leading-snug"
+          className="mt-6 max-w-3xl mx-auto font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-center"
           data-reveal
           data-reveal-delay="1"
         >
-          Jak podnikatelé získali +10 000 sledujících pomocí 5–8 sekundových videí — bez
-          agentury, štěstí a jen pomocí telefonu.
+          Získej <span className="text-accent">+10 000 sledujících</span> a{" "}
+          <span className="text-accent">prvních 100 000</span> z Instagramu pomocí{" "}
+          <span className="text-accent">5–8 sek. videí</span>
+        </p>
+        <p
+          className="mt-4 max-w-3xl mx-auto font-display text-lg sm:text-2xl text-ink leading-snug text-center"
+          data-reveal
+          data-reveal-delay="1"
+        >
+          Bez agentury, reklamy, štěstí a jen s telefonem.
         </p>
 
-        <div className="mt-10 max-w-4xl" data-reveal data-reveal-delay="2">
+        <div className="mt-10 max-w-4xl mx-auto" data-reveal data-reveal-delay="2">
           <VslPlayer
             bunny={bunny}
             youtubeId={!bunny ? ytId : undefined}
@@ -149,7 +157,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 2: BRIDGE */}
       <section className="border-t border-line bg-surface">
-        <div className="container-page py-16 max-w-3xl">
+        <div className="container-page py-16 max-w-3xl text-center lg:text-left">
           <h2 className="font-display text-2xl sm:text-3xl font-bold leading-tight" data-reveal>
             P.S. Mám pro Tebe <span className="text-accent">jedinečnou nabídku.</span>
           </h2>
@@ -181,7 +189,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 3: HEADLINE NABIDKY */}
       <section id="nabidka" className="container-page py-20">
-        <div className="max-w-3xl" data-reveal>
+        <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left" data-reveal>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl font-extrabold leading-[1.05] tracking-tight">
             Projekt <span className="text-accent">Organika</span>
           </h2>
@@ -192,7 +200,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             Online trénink, který Tě posune z bodu <em>„vím, že to funguje“</em> do bodu{" "}
             <em>„mám systém, který funguje pro mě“</em>.
           </p>
-          <div className="mt-8 max-w-md">
+          <div className="mt-8 max-w-md mx-auto lg:mx-0">
             <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
             <p className="mt-3 text-xs text-muted">
               🔒 Okamžitý přístup po platbě · Doživotně tvé
@@ -276,9 +284,9 @@ export default function SystemPage({ searchParams }: PageProps) {
           <div className="rounded-2xl aspect-[4/5] relative w-full overflow-hidden border border-line bg-surface" data-reveal>
             <Image src="/sad.webp" alt="Pain" fill className="object-cover" sizes="280px" />
           </div>
-          <div data-reveal data-reveal-delay="1">
+          <div data-reveal data-reveal-delay="1" className="text-center md:text-left">
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight">Tohle znáš, že?</h2>
-            <ul className="mt-6 space-y-4 text-lg text-ink">
+            <ul className="mt-6 space-y-4 text-lg text-ink inline-block text-left md:block">
               <PainItem>
                 <strong>Máš co říct</strong> — ale když máš natočit video, mozek se zasekne.
               </PainItem>
@@ -320,11 +328,11 @@ export default function SystemPage({ searchParams }: PageProps) {
       <section className="bg-surface">
         <div className="container-page py-20">
           <div className="grid md:grid-cols-[1fr_280px] gap-10 max-w-4xl items-start">
-            <div data-reveal>
+            <div data-reveal className="text-center md:text-left">
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight">
                 Identita, na kterou jsi <span className="text-accent">čekal</span>
               </h2>
-              <ul className="mt-6 space-y-4 text-lg text-ink">
+              <ul className="mt-6 space-y-4 text-lg text-ink inline-block text-left md:block">
                 {[
                   "Víš přesně, co tvořit — a proč to funguje.",
                   "Máš systém na 5–8 sekundové formáty, které algoritmus tlačí.",
@@ -349,7 +357,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 7: 3 DNY 3 VYSTUPY */}
       <section className="container-page py-20">
-        <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
+        <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight text-center md:text-left" data-reveal>
           3 dny. <span className="text-accent">3 výstupy.</span>
         </h2>
 
@@ -397,7 +405,7 @@ export default function SystemPage({ searchParams }: PageProps) {
           </div>
         </div>
 
-        <div className="mt-12 max-w-md">
+        <div className="mt-12 max-w-md mx-auto md:mx-0">
           <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
         </div>
       </section>
@@ -405,7 +413,7 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 8: BONUSY */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20">
-          <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
+          <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight text-center md:text-left" data-reveal>
             Bonusy v hodnotě <span className="text-accent">33 920 Kč</span>
           </h2>
 
@@ -491,7 +499,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 10: URGENCY (osobní feedback) */}
       <section className="border-y border-line bg-surface">
-        <div className="container-page py-20 max-w-2xl">
+        <div className="container-page py-20 max-w-2xl text-center md:text-left">
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight" data-reveal>
             Proč prvních 100 míst <span className="text-accent">za 697 Kč?</span>
           </h2>
@@ -505,7 +513,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             konkrétní obsah. Při větším objemu to fyzicky nezvládnu udržet v kvalitě, kterou
             považuji za standard.
           </p>
-          <div className="mt-8 max-w-md">
+          <div className="mt-8 max-w-md mx-auto md:mx-0">
             <CheckoutButton
               prefill={prefill}
               label="Chci jedno z posledních míst →"
@@ -542,8 +550,8 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 11b: ORIGIN STORY */}
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20 max-w-3xl">
-          <div className="mt-6 grid sm:grid-cols-[200px_1fr] gap-8 items-start" data-reveal data-reveal-delay="1">
-            <div className="rounded-2xl aspect-square w-full overflow-hidden border border-line bg-white relative">
+          <div className="mt-6 grid sm:grid-cols-[200px_1fr] gap-8 items-start text-center sm:text-left" data-reveal data-reveal-delay="1">
+            <div className="rounded-2xl aspect-square w-full max-w-[200px] mx-auto sm:mx-0 overflow-hidden border border-line bg-white relative">
               <Image src="/img/maty.webp" alt="Matyáš Linda" fill className="object-cover" sizes="200px" />
             </div>
             <div>
@@ -577,19 +585,19 @@ export default function SystemPage({ searchParams }: PageProps) {
             ))}
           </div>
 
-          <p className="mt-8 font-display text-xl text-ink italic border-l-4 border-accent pl-5">
+          <p className="mt-8 font-display text-xl text-ink italic border-l-4 border-accent pl-5 text-left">
             Tvoje znalosti mohou měnit životy. Chybí ti jen{" "}
             <span className="text-accent not-italic">systém, jak je dostat ven</span>.
           </p>
 
-          <div className="mt-8 max-w-md">
+          <div className="mt-8 max-w-md mx-auto sm:mx-0">
             <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
           </div>
         </div>
       </section>
 
       {/* SECTION 12: GARANCE */}
-      <section className="container-page py-20 max-w-3xl">
+      <section className="container-page py-20 max-w-3xl text-center md:text-left">
         <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
           Co když u mě <span className="text-accent">nezafunguje?</span>
         </h2>
@@ -605,7 +613,7 @@ export default function SystemPage({ searchParams }: PageProps) {
         <p className="mt-5 font-display text-xl text-ink" data-reveal>
           Riziko nese moje strana. <span className="text-accent">Ne tvoje.</span>
         </p>
-        <div className="mt-8 max-w-md">
+        <div className="mt-8 max-w-md mx-auto md:mx-0">
           <CheckoutButton
             prefill={prefill}
             label="Jdu do toho →"
@@ -616,11 +624,11 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 13: PRO KOHO TO NENI */}
       <section className="border-y border-line bg-surface">
-        <div className="container-page py-20 max-w-3xl">
+        <div className="container-page py-20 max-w-3xl text-center md:text-left">
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight" data-reveal>
             Tohle není pro každého
           </h2>
-          <ul className="mt-8 space-y-4 text-lg text-ink" data-reveal>
+          <ul className="mt-8 space-y-4 text-lg text-ink inline-block text-left md:block" data-reveal>
             {[
               "Pokud hledáš rychlé hacky bez dlouhodobé strategie — nech to být.",
               "Pokud nemáš co nabídnout (produkt, službu, expertízu) — tohle ti nepomůže.",
@@ -645,7 +653,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 14: FAQ */}
       <section id="faq" className="container-page py-20 max-w-3xl">
-        <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
+        <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight text-center md:text-left" data-reveal>
           Nejčastější otázky
         </h2>
         <div className="mt-8" data-reveal>
@@ -694,7 +702,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 
       {/* SECTION 15: 2 MOZNOSTI */}
       <section className="border-t border-line bg-surface">
-        <div className="container-page py-20 max-w-3xl">
+        <div className="container-page py-20 max-w-3xl text-center md:text-left">
           <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
             Máš <span className="text-accent">2 možnosti</span>:
           </h2>
@@ -716,7 +724,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             Rozdíl mezi tebou a 4 členy s 700 000 zhlédnutí?{" "}
             <span className="text-accent">Oni rozhodli teď.</span>
           </p>
-          <div className="mt-8 max-w-md">
+          <div className="mt-8 max-w-md mx-auto md:mx-0">
             <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
             <p className="mt-3 text-xs text-muted">
               🔒 Okamžitý přístup po platbě · Doživotně tvé
@@ -726,7 +734,7 @@ export default function SystemPage({ searchParams }: PageProps) {
       </section>
 
       {/* SECTION 16: P.S. */}
-      <section className="container-page py-20 max-w-3xl">
+      <section className="container-page py-20 max-w-3xl text-center md:text-left">
         <p className="mt-5 text-lg text-ink leading-relaxed" data-reveal>
           Většina lidí, co dosledovala video až sem, zavře stránku. Přečtou ještě pár recenzí.
           Možná otevřou konkurenční kurz. A za týden zapomenou, že tu kdy byli.
@@ -742,7 +750,7 @@ export default function SystemPage({ searchParams }: PageProps) {
         <p className="mt-6 font-display text-2xl" data-reveal>
           Jediný rozdíl: <span className="text-accent">rozhodla se.</span>
         </p>
-        <div className="mt-8 max-w-md" data-reveal>
+        <div className="mt-8 max-w-md mx-auto md:mx-0" data-reveal>
           <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
         </div>
       </section>
