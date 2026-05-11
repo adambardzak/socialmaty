@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { ecomailSubscribe } from "@/lib/ecomail";
-import { circleInviteToOrganika } from "@/lib/circle";
 
 export const runtime = "nodejs";
 
@@ -33,7 +32,8 @@ export async function POST(req: Request) {
   if (!body.consent)
     return NextResponse.json({ error: "Bez souhlasu nemůžeme kontakt uložit." }, { status: 400 });
 
-  // 1) Ecomail (socialmaty list — ECOMAIL_LIST_ID v env)
+  // Ecomail (socialmaty list — ECOMAIL_LIST_ID v env).
+  // Circle invite cíleně NEvoláme — placený přístup do Projektu Organika řeší Circle paywall.
   try {
     await ecomailSubscribe({
       email,
@@ -43,13 +43,6 @@ export async function POST(req: Request) {
     });
   } catch (err) {
     console.error("[lead] ecomail threw", err);
-  }
-
-  // 2) Circle (Growmat Academy — pozve do prostoru, pošle invite email)
-  try {
-    await circleInviteToOrganika({ email, name });
-  } catch (err) {
-    console.error("[lead] circle threw", err);
   }
 
   return NextResponse.json({ ok: true });
