@@ -473,6 +473,18 @@ export default function SystemPage({ searchParams }: PageProps) {
               value="10 000 Kč"
               body="Po dokončení Organiky máš jako jediný přístup ke zvýhodněné nabídce."
             />
+            <Bonus
+              n="07"
+              title="Rozbor 5 virálních videí s miliony zhlédnutí"
+              value="3 990 Kč"
+              body="Ukážu ti přesně, proč to funguje — ne jen že to funguje."
+            />
+            <Bonus
+              n="08"
+              title="3 případové studie klientů"
+              value="4 990 Kč"
+              body="3 klienti. 3 obory. 1 systém. Reálné screenshoty, čísla a kroky."
+            />
           </div>
         </div>
       </section>
