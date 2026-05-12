@@ -3,6 +3,7 @@ import CheckoutButton from "@/components/CheckoutButton";
 import VslPlayer from "@/components/VslPlayer";
 import FAQ from "@/components/FAQ";
 import CaseStudiesCarousel from "@/components/CaseStudiesCarousel";
+import { MembersVysledkyCarousel, MembersRecenzeCarousel } from "@/components/MembersResultsCarousel";
 import StickyCta from "@/components/StickyCta";
 
 export const metadata = {
@@ -282,7 +283,7 @@ export default function SystemPage({ searchParams }: PageProps) {
       <section className="container-page py-20">
         <div className="grid md:grid-cols-[280px_1fr] gap-10 max-w-4xl items-start">
           <div className="rounded-2xl aspect-[4/5] relative w-full overflow-hidden border border-line bg-surface" data-reveal>
-            <Image src="/sad.webp" alt="Pain" fill className="object-cover" sizes="280px" />
+            <Image src="/negativpic.png" alt="Pain" fill className="object-cover" sizes="280px" />
           </div>
           <div data-reveal data-reveal-delay="1" className="text-center md:text-left">
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight">Tohle znáš, že?</h2>
@@ -349,7 +350,7 @@ export default function SystemPage({ searchParams }: PageProps) {
               </ul>
             </div>
             <div className="rounded-2xl aspect-[4/5] relative w-full overflow-hidden border border-line bg-white order-first md:order-last" data-reveal data-reveal-delay="1">
-              <Image src="/happy.webp" alt="Transformace" fill className="object-cover" sizes="280px" />
+              <Image src="/pozitivpic.png" alt="Transformace" fill className="object-cover" sizes="280px" />
             </div>
           </div>
         </div>
@@ -362,12 +363,13 @@ export default function SystemPage({ searchParams }: PageProps) {
         </h2>
 
         <div className="mt-10 grid md:grid-cols-[300px_1fr] gap-12 items-start">
-          <div className="rounded-2xl relative aspect-[4/5] border border-line bg-surface overflow-hidden" data-reveal>
+          <div className="rounded-2xl border border-line bg-surface overflow-hidden" data-reveal>
             <Image
               src="/img/grafika/mockup.webp"
               alt="Projekt Organika mockup"
-              fill
-              className="object-cover"
+              width={300}
+              height={400}
+              className="w-full h-auto object-contain"
               sizes="300px"
             />
           </div>
@@ -544,6 +546,34 @@ export default function SystemPage({ searchParams }: PageProps) {
               />
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* SECTION 11c: MEMBERS VÝSLEDKY */}
+      <section className="container-page py-20">
+        <h2
+          className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
+          data-reveal
+        >
+          Sledující a views <span className="text-accent">členů Organiky.</span>
+        </h2>
+        <div className="mt-10" data-reveal data-reveal-delay="1">
+          <MembersVysledkyCarousel />
+        </div>
+      </section>
+
+      {/* SECTION 11d: MEMBERS RECENZE */}
+      <section className="border-t border-line bg-surface">
+        <div className="container-page py-20">
+          <h2
+            className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
+            data-reveal
+          >
+            Co říkají <span className="text-accent">členové Organiky.</span>
+          </h2>
+          <div className="mt-10" data-reveal data-reveal-delay="1">
+            <MembersRecenzeCarousel />
+          </div>
         </div>
       </section>
 
