@@ -225,11 +225,14 @@ export default function SystemPage({ searchParams }: PageProps) {
             data-reveal-delay="1"
           >
             Členové Projektu Organika napříč obory. Společně přes{" "}
-            <strong className="text-ink">700 000 organických zhlédnutí</strong> za pár týdnů.
+            <strong className="text-ink">1 000 000+ organických zhlédnutí</strong> za pár týdnů.
           </p>
 
-          <div className="mt-10" data-reveal data-reveal-delay="1">
+          {/* <div className="mt-10" data-reveal data-reveal-delay="1">
             <CaseStudiesCarousel cases={cases} />
+          </div> */}
+          <div className="mt-10" data-reveal data-reveal-delay="1">
+            <MembersVysledkyCarousel />
           </div>
 
           {/* Highlight stories */}

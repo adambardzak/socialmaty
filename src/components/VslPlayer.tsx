@@ -38,6 +38,7 @@ function PlayBadge() {
 
 export default function VslPlayer({ bunny, youtubeId, src, poster, title = "Trénink zdarma" }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [started, setStarted] = useState(false);
   const [playing, setPlaying] = useState(false);
 
   if (bunny) {
@@ -77,16 +78,16 @@ export default function VslPlayer({ bunny, youtubeId, src, poster, title = "Tré
           className="absolute inset-0 h-full w-full"
           src={src}
           poster={poster}
-          controls={playing}
+          controls={started}
           preload="metadata"
           playsInline
-          onPlay={() => setPlaying(true)}
+          onPlay={() => { setStarted(true); setPlaying(true); }}
           onPause={() => setPlaying(false)}
           onEnded={() => setPlaying(false)}
         >
           Tvůj prohlížeč neumí přehrát video.
         </video>
-        {!playing && (
+        {!started && (
           <button
             type="button"
             aria-label="Přehrát video"
