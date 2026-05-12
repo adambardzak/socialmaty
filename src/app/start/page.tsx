@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, Star } from "@/components/Icons";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata = {
   title: "Socialmaty — Začni tady",
@@ -165,14 +165,19 @@ function ItemCard({ item }: { item: Item }) {
 
   if (item.external) {
     return (
-      <a href={item.href} target="_blank" rel="noopener noreferrer" className="block">
+      <TrackedLink
+        href={item.href}
+        external
+        source="start_linktree"
+        label={item.title}
+      >
         {inner}
-      </a>
+      </TrackedLink>
     );
   }
   return (
-    <Link href={item.href} className="block">
+    <TrackedLink href={item.href} source="start_linktree" label={item.title}>
       {inner}
-    </Link>
+    </TrackedLink>
   );
 }

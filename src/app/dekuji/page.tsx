@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Logo";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata = {
   title: "Děkuji za platbu — Projekt Organika",
@@ -83,9 +83,15 @@ export default function DekujiPage() {
         </div>
 
         <div className="mt-8" data-reveal>
-          <Link href={circleUrl} className="btn-primary w-full sm:w-auto">
+          <TrackedLink
+            href={circleUrl}
+            external
+            source="dekuji"
+            label="Vstoupit do Circle"
+            className="btn-primary w-full sm:w-auto"
+          >
             Vstoupit do Circle →
-          </Link>
+          </TrackedLink>
         </div>
 
         <p className="mt-8 text-sm text-muted" data-reveal>

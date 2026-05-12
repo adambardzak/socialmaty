@@ -104,7 +104,7 @@ export default function SystemPage({ searchParams }: PageProps) {
 
   return (
     <>
-      <StickyCta href="#nabidka" label="Vstoupit za 697 Kč" />
+      <StickyCta href="#nabidka" label="Vstoupit za 697 Kč" source="trenink" />
 
       {/* SECTION 1: HERO + VIDEO */}
       <section className="container-page pt-16 pb-12 text-center">
@@ -216,7 +216,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             <em>„mám systém, který funguje pro mě“</em>.
           </p>
           <div className="mt-8 max-w-md mx-auto lg:mx-0">
-            <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
+            <CheckoutButton prefill={prefill} source="trenink_hero" className="btn-primary btn-primary-shimmer w-full" />
             <p className="mt-3 text-xs text-muted">
               🔒 Okamžitý přístup po platbě · Doživotně tvé
             </p>
@@ -290,6 +290,7 @@ export default function SystemPage({ searchParams }: PageProps) {
           <div className="mt-10 max-w-md mx-auto">
             <CheckoutButton
               prefill={prefill}
+              source="trenink_social_proof"
               className="btn-primary btn-primary-shimmer w-full"
             />
           </div>
@@ -439,7 +440,7 @@ export default function SystemPage({ searchParams }: PageProps) {
         </div>
 
         <div className="mt-12 max-w-md mx-auto md:mx-0">
-          <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
+          <CheckoutButton prefill={prefill} source="trenink_whats_inside" className="btn-primary btn-primary-shimmer w-full" />
         </div>
       </section>
 
@@ -542,6 +543,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             <div className="mt-8 max-w-md mx-auto">
               <CheckoutButton
                 prefill={prefill}
+                source="trenink_pricing"
                 className="btn-primary btn-primary-shimmer w-full"
               />
             </div>
@@ -569,6 +571,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             <CheckoutButton
               prefill={prefill}
               label="Chci jedno z posledních míst →"
+              source="trenink_urgency"
               className="btn-primary btn-primary-shimmer w-full"
             />
           </div>
@@ -659,7 +662,7 @@ export default function SystemPage({ searchParams }: PageProps) {
           </p>
 
           <div className="mt-8 max-w-md mx-auto sm:mx-0">
-            <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
+            <CheckoutButton prefill={prefill} source="trenink_mission" className="btn-primary btn-primary-shimmer w-full" />
           </div>
         </div>
       </section>
@@ -685,6 +688,7 @@ export default function SystemPage({ searchParams }: PageProps) {
           <CheckoutButton
             prefill={prefill}
             label="Jdu do toho →"
+            source="trenink_guarantee"
             className="btn-primary btn-primary-shimmer w-full"
           />
         </div>
@@ -792,7 +796,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             <span className="text-accent">Oni se rozhodli teď.</span>
           </p>
           <div className="mt-8 max-w-md mx-auto md:mx-0">
-            <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
+            <CheckoutButton prefill={prefill} source="trenink_decision" className="btn-primary btn-primary-shimmer w-full" />
             <p className="mt-3 text-xs text-muted">
               🔒 Okamžitý přístup po platbě · Doživotně tvé
             </p>
@@ -818,7 +822,7 @@ export default function SystemPage({ searchParams }: PageProps) {
           Jediný rozdíl: <span className="text-accent">rozhodla se.</span>
         </p>
         <div className="mt-8 max-w-md mx-auto md:mx-0" data-reveal>
-          <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
+          <CheckoutButton prefill={prefill} source="trenink_ps" className="btn-primary btn-primary-shimmer w-full" />
         </div>
       </section>
     </>

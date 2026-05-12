@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { track } from "@vercel/analytics";
 
 interface Props {
   /**
@@ -81,9 +82,18 @@ export default function VslPlayer({ bunny, youtubeId, src, poster, title = "Tré
           controls={started}
           preload="metadata"
           playsInline
-          onPlay={() => { setStarted(true); setPlaying(true); }}
+          onPlay={() => {
+            if (!started) {
+              track("video_play_start", { kind: "html5", title });
+            }
+            setStarted(true);
+            setPlaying(true);
+          }}
           onPause={() => setPlaying(false)}
-          onEnded={() => setPlaying(false)}
+          onEnded={() => {
+            setPlaying(false);
+            track("video_ended", { kind: "html5", title });
+          }}
         >
           Tvůj prohlížeč neumí přehrát video.
         </video>

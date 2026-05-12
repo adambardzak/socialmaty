@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 
 interface Props {
   source: string;
@@ -26,9 +27,11 @@ export default function LeadForm({
     setError(null);
     if (!consent) {
       setError("Potvrď prosím souhlas se zpracováním údajů.");
+      track("lead_submit_error", { source, reason: "no_consent" });
       return;
     }
     setLoading(true);
+    track("lead_submit_attempt", { source });
     try {
       const res = await fetch("/api/lead", {
         method: "POST",
@@ -39,10 +42,12 @@ export default function LeadForm({
         const data = await res.json().catch(() => ({}));
         throw new Error(data?.error || "Něco se pokazilo, zkus to prosím znovu.");
       }
+      track("lead_submit_success", { source });
       const params = new URLSearchParams({ name, email });
       window.location.href = `${redirectTo}?${params.toString()}`;
     } catch (err: any) {
       setError(err?.message ?? "Nepodařilo se odeslat formulář.");
+      track("lead_submit_error", { source, reason: err?.message ?? "unknown" });
       setLoading(false);
     }
   }

@@ -1,3 +1,6 @@
+"use client";
+
+import { track } from "@vercel/analytics";
 import { ArrowRight } from "./Icons";
 
 interface Props {
@@ -8,6 +11,10 @@ interface Props {
    * Not used: Circle paywall handles checkout (email collected on its page).
    */
   prefill?: { name?: string; email?: string };
+  /**
+   * Where on the page/site this button is rendered. Used for analytics.
+   */
+  source?: string;
 }
 
 export const CIRCLE_CHECKOUT_URL =
@@ -17,6 +24,7 @@ export const CIRCLE_CHECKOUT_URL =
 export default function CheckoutButton({
   label = "Zajistit místo za 697 Kč",
   className = "btn-primary w-full",
+  source = "unknown",
 }: Props) {
   return (
     <a
@@ -24,6 +32,9 @@ export default function CheckoutButton({
       target="_blank"
       rel="noopener noreferrer"
       className={className}
+      onClick={() => {
+        track("checkout_click", { source, label });
+      }}
     >
       {label}
       <ArrowRight />

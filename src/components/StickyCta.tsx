@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { track } from "@vercel/analytics";
 
 interface Props {
   href?: string;
@@ -9,9 +10,18 @@ interface Props {
    * If provided, click triggers a custom handler instead of href navigation.
    */
   onClick?: () => void;
+  /**
+   * Identifier for analytics (which page / context).
+   */
+  source?: string;
 }
 
-export default function StickyCta({ href = "#nabidka", label = "Vstoupit za 697 Kč", onClick }: Props) {
+export default function StickyCta({
+  href = "#nabidka",
+  label = "Vstoupit za 697 Kč",
+  onClick,
+  source = "unknown",
+}: Props) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -20,6 +30,11 @@ export default function StickyCta({ href = "#nabidka", label = "Vstoupit za 697 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleClick = () => {
+    track("sticky_cta_click", { source, label, href: onClick ? null : href });
+    onClick?.();
+  };
 
   return (
     <div
@@ -31,11 +46,11 @@ export default function StickyCta({ href = "#nabidka", label = "Vstoupit za 697 
     >
       <div className="bg-gradient-to-t from-white via-white to-transparent pt-6 pb-3 px-4">
         {onClick ? (
-          <button onClick={onClick} className="btn-primary btn-primary-shimmer w-full">
+          <button onClick={handleClick} className="btn-primary btn-primary-shimmer w-full">
             {label} →
           </button>
         ) : (
-          <a href={href} className="btn-primary btn-primary-shimmer w-full">
+          <a href={href} onClick={handleClick} className="btn-primary btn-primary-shimmer w-full">
             {label} →
           </a>
         )}
