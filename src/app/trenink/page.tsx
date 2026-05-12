@@ -141,6 +141,7 @@ export default function SystemPage({ searchParams }: PageProps) {
         </p>
 
         <div className="mt-10 max-w-4xl mx-auto" data-reveal data-reveal-delay="2">
+          <p className="text-sm">↓pusť si trénink zdarma↓</p>
           <VslPlayer
             bunny={bunny}
             youtubeId={!bunny ? ytId : undefined}
