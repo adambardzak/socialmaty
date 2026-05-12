@@ -24,16 +24,16 @@ const items: Item[] = [
     badge: "Trénink zdarma",
     title: "Získej +10 000 sledujících a prvních 100 000 Kč z Instagramu pomocí 5–8 sek. videí",
     description:
-      "27 min trénink. Konkrétní systém 5–8 sek. videí, který nasbíral 30M+ organických zhlédnutí.",
+      "20 min trénink. Konkrétní systém 5–8 sek. videí, který nasbíral 30M+ organických zhlédnutí.",
     price: "Zdarma",
   },
   {
     href: "https://projektorganika.cz/",
     badge: "Placený kurz",
     title: "Projekt Organika",
-    subtitle: "3denní online trénink",
+    subtitle: "3denní minikurz",
     description:
-      "3 dny intenzivního tréninku · konkrétní výstupy · moje osobní zpětná vazba.",
+      "3 dny · 3 konkrétní výstupy · osobní zpětná vazba.",
     price: "697 Kč",
   },
 ];
@@ -89,6 +89,7 @@ export default function StartPage() {
 
       {/* Value ladder */}
       <div className="mt-10 space-y-4" data-reveal data-reveal-delay="2">
+        <p>Pro začínající</p>
         {items.map((item) => (
           <ItemCard key={item.href} item={item} />
         ))}
