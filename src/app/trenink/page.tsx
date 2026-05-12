@@ -163,27 +163,40 @@ export default function SystemPage({ searchParams }: PageProps) {
           <h2 className="font-display text-2xl sm:text-3xl font-bold leading-tight" data-reveal>
             P.S. Mám pro Tebe <span className="text-accent">jedinečnou nabídku.</span>
           </h2>
-          <div className="mt-6 space-y-4 text-lg text-ink leading-relaxed" data-reveal data-reveal-delay="1">
-            <p>
-              Před chvílí jsi viděl, <strong>proč</strong> 5–8 sekundové video formáty fungují
-              lépe než cokoli jiného.
+          <div className="mt-6 space-y-1 text-lg text-ink leading-relaxed" data-reveal data-reveal-delay="1">
+            <p className="font-bold">
+              Tohle je moment, kde většina lidí udělá chybu.
             </p>
             <p>
-              Viděl jsi, <strong>co</strong> dělají podnikatelé, kteří touhle cestou rostou.
+              Pustí si trénink zdarma.
             </p>
             <p>
-              Jednu věc jsem ti ale <strong>záměrně neukázal</strong>.
+              Řeknou si:
             </p>
-            <p className="font-display text-2xl font-bold">Jak přesně.</p>
+            <p className="font-display text-2xl font-bold">„To dává smysl.“</p>
             <p>
-              Ne proto, že bych ti to nechtěl říct. Ale protože „jak“ se nedá vysvětlit za 20
-              minut. <strong>„Jak“ potřebuje 3 dny</strong> — a moji přímou zpětnou vazbu na{" "}
-              <strong>tvůj</strong> profil, <strong>tvůj</strong> obsah, <strong>tvoji</strong>{" "}
-              situaci.
+              Možná si i uloží pár poznámek.
             </p>
             <p>
-              A přesně to je důvod, proč existuje{" "}
-              <span className="text-accent font-semibold">Projekt Organika.</span>
+              A pak se druhý den vrátí ke stejnému problému:
+            </p>
+            <p>
+              <b>Neví, co natočit.</b>
+            </p>
+            <p>
+              <b>Neví, jak upravit profil.</b>
+            </p>
+            <p>
+              <b>Neví, jestli jejich obsah dává smysl.</b>
+            </p>
+            <p>
+              A po pár pokusech znovu získají pocit, že <b>Instagram je proti nim.</b>
+            </p>
+            <p>
+              Protože mezi tím, že něco pochopíš, a tím, že to správně aplikuješ na svůj profil, je obrovský rozdíl.
+            </p>
+            <p>
+              A právě tuhle mezeru řeší <b>Projekt Organika:</b>
             </p>
           </div>
         </div>
