@@ -35,7 +35,7 @@ const cases = [
     handle: "@jidlosmartinem",
     before: "/img/case-studies/martin-pred.webp",
     after: "/img/case-studies/martin-po.webp",
-    result: "Z 0 na 10K+ sledujících",
+    result: "Z 0 na 17K+ sledujících",
     niche: "jídlo",
   },
   {
@@ -49,14 +49,14 @@ const cases = [
     handle: "@mitolife_cz",
     before: "/img/case-studies/mitolife-pred.webp",
     after: "/img/case-studies/mito-po.webp",
-    result: "Z 0 na 10K+ sledujících",
+    result: "Z 5 na 45K+ sledujících",
     niche: "energie a regenerace",
   },
   {
     handle: "@soberboys.podcast",
     before: "/img/case-studies/sober-pred-1-1.webp",
     after: "/img/case-studies/sober-boys-po.webp",
-    result: "Růst podcastového účtu",
+    result: "Podcast z 0 na 15k+ sledujících",
     niche: "podcast",
   },
   {
@@ -66,19 +66,19 @@ const cases = [
     result: "Vlastní Matyášův účet",
     niche: "Instagram",
   },
-  {
-    handle: "@zijulip",
-    before: "/img/predapo/zijulip-pred.jpg",
-    after: "/img/case-studies/marie-po.webp",
-    result: "Růst sledujících od nuly",
-    niche: "lifestyle",
-  },
+  // {
+  //   handle: "@zijulip",
+  //   before: "/img/predapo/zijulip-pred.jpg",
+  //   after: "/img/case-studies/marie-po.webp",
+  //   result: "Růst sledujících od nuly",
+  //   niche: "lifestyle",
+  // },
   {
     handle: "@vasekjindrich",
     before: "/img/predapo/vasek-pred.jpg",
     after: "/img/case-studies/vasek-po.webp",
-    result: "Růst osobního brandu",
-    niche: "byznys",
+    result: "+70k sledujících za 3 měsíce",
+    niche: "niche marketing",
   },
 ];
 
@@ -225,7 +225,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             data-reveal-delay="1"
           >
             Členové Projektu Organika napříč obory. Společně přes{" "}
-            <strong className="text-ink">1 000 000+ organických zhlédnutí</strong> za pár týdnů.
+            <strong className="text-ink">1 000 000+ organických zhlédnutí</strong> do 14 dnů od vstupu.
           </p>
 
           {/* <div className="mt-10" data-reveal data-reveal-delay="1">
@@ -236,7 +236,7 @@ export default function SystemPage({ searchParams }: PageProps) {
           </div>
 
           {/* Highlight stories */}
-          <div className="mt-14 grid md:grid-cols-2 gap-6">
+          {/* <div className="mt-14 grid md:grid-cols-2 gap-6">
             <Member
               tag="Member 1 · zdraví střev"
               headline="500 000 zhlédnutí z jediného videa"
@@ -261,7 +261,7 @@ export default function SystemPage({ searchParams }: PageProps) {
               body={`„Můj obor není sexy. Tvořím weby. To si nikdo neukládá.“ To si myslel před Organikou. Pak optimalizoval profil podle systému, natočil 3 videa — a prodal první digitální produkt.`}
               note="Algoritmus nezajímá, jestli je tvůj obor sexy. Zajímá ho, jestli umíš zaujmout v prvních 5 sekundách."
             />
-          </div>
+          </div> */}
 
           <div className="rounded-2xl mt-10 max-w-2xl mx-auto border border-line bg-white p-6">
             <p className="text-sm text-muted">
@@ -278,6 +278,20 @@ export default function SystemPage({ searchParams }: PageProps) {
               prefill={prefill}
               className="btn-primary btn-primary-shimmer w-full"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-surface">
+        <div className="container-page py-20">
+          <h2
+            className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
+            data-reveal
+          >
+            Co říkají <span className="text-accent">členové Organiky.</span>
+          </h2>
+          <div className="mt-10" data-reveal data-reveal-delay="1">
+            <MembersRecenzeCarousel />
           </div>
         </div>
       </section>
@@ -319,7 +333,7 @@ export default function SystemPage({ searchParams }: PageProps) {
       <section className="border-y border-line">
         <div className="container-page py-12 max-w-3xl mx-auto text-center">
           <p
-            className="font-display text-2xl sm:text-3xl text-ink leading-snug"
+            className="font-display font-bold text-2xl sm:text-3xl text-ink leading-snug"
             data-reveal
           >
             Problém nikdy nebyl v tom, co víš. Chyběl ti{" "}
@@ -334,14 +348,14 @@ export default function SystemPage({ searchParams }: PageProps) {
           <div className="grid md:grid-cols-[1fr_280px] gap-10 max-w-4xl items-start">
             <div data-reveal className="text-center md:text-left">
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight">
-                Identita, na kterou jsi <span className="text-accent">čekal</span>
+                Tohle tě <span className="text-accent">čeká</span>
               </h2>
-              <ul className="mt-6 space-y-4 text-lg text-ink inline-block text-left md:block">
+              <ul className="mt-6 space-y-4 text-lg text-ink inline-block text-left md:block font-bold">
                 {[
                   "Víš přesně, co tvořit — a proč to funguje.",
                   "Máš systém na 5–8 sekundové formáty, které algoritmus tlačí.",
                   "Vytvoříš první video už během prvního dne — s mojí osobní zpětnou vazbou.",
-                  "Přestaneš tipovat a začneš tvořit s jistotou.",
+                  "Přestaneš tipovat a začneš tvořit s jistotou a výsledky.",
                 ].map((t) => (
                   <li key={t} className="flex gap-3">
                     <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center bg-accent text-white text-xs font-bold rounded-lg">
@@ -362,13 +376,13 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 7: 3 DNY 3 VYSTUPY */}
       <section className="container-page py-20">
         <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight text-center md:text-left" data-reveal>
-          3 dny. <span className="text-accent">3 výstupy.</span>
+          3 dny. <span className="text-accent">3 výstupy.</span> Osobní podpora.
         </h2>
 
         <div className="mt-10 grid md:grid-cols-[300px_1fr] gap-12 items-start">
           <div className="rounded-2xl border border-line bg-surface overflow-hidden" data-reveal>
             <Image
-              src="/img/grafika/mockup.webp"
+              src="/mockup.png"
               alt="Projekt Organika mockup"
               width={300}
               height={400}
@@ -393,7 +407,7 @@ export default function SystemPage({ searchParams }: PageProps) {
               tagline="Natočíš svoje první video podle systému — a pošleš mi ho na zpětnou vazbu."
               bullets={[
                 "Ověřený systém tvorby krátkých videí, který přivádí klienty",
-                "3 formáty co fungují napříč obory — bez tance a šaškování",
+                "5 formátů co fungují napříč obory — bez tance a šaškování",
                 "První hotové video připravené k publikaci",
               ]}
             />
@@ -404,7 +418,7 @@ export default function SystemPage({ searchParams }: PageProps) {
               bullets={[
                 "Kompletní Growmat systém „od příspěvku po delegaci“",
                 "Plán obsahu na 14 dní — přesně víš, co tvořit a proč",
-                "4 reálné case studies s rozborem co fungovalo a proč",
+                "3 reálné case studies s rozborem co fungovalo a proč",
               ]}
             />
           </div>
@@ -419,7 +433,7 @@ export default function SystemPage({ searchParams }: PageProps) {
       <section className="border-y border-line bg-surface">
         <div className="container-page py-20">
           <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight text-center md:text-left" data-reveal>
-            Bonusy v hodnotě <span className="text-accent">33 920 Kč</span>
+            Bonusy v hodnotě <span className="text-accent">33 930 Kč</span>
           </h2>
 
           <div className="mt-10 grid md:grid-cols-2 gap-5">
@@ -427,30 +441,36 @@ export default function SystemPage({ searchParams }: PageProps) {
               n="01"
               title="5 ověřených šablon příspěvků"
               value="1 990 Kč"
-              body="Od hooku po CTA. Tvůj první úspěch za 15 minut."
+              body="5 milionů zhlédnutí rozebráno krok za krokem."
             />
             <Bonus
               n="02"
+              title="Profi bio za 3 minuty pomocí Matyho AI šablony "
+              value="1 490 Kč"
+              body="Dostaneš hotové bio do 150 znaků, 3 varianty username a 5 story highlights. Bez přemýšlení. Za 3 minuty dle ověřených metod Matyho a klientů."
+            />
+            <Bonus
+              n="03"
               title="Algoritmický hack (VIP tip od CEO Instagramu)"
               value="2 990 Kč"
               body="Získej nekonečný přísun nápadů pro obsah přehlíženou metodou."
             />
             <Bonus
-              n="03"
+              n="04"
               title="Uzavřená komunita Growmat na Circle, doživotně"
               value="4 990 Kč"
               body="Ptej se na cokoli. Vidíš ostatní, oni vidí Tebe. Nikdy nejsi sám."
             />
             <Bonus
-              n="04"
-              title="Šance na 1:1 mentoring"
+              n="05"
+              title="Šance na 1:1 mentoring zdarma"
               value="5 000 Kč"
               body="60 minut osobně se mnou. Dokonči úkoly a kvalifikuješ se."
             />
             <Bonus
-              n="05"
+              n="06"
               title="Zvýhodněný vstup do Growmat Academy"
-              value="9 990 Kč"
+              value="10 000 Kč"
               body="Po dokončení Organiky máš jako jediný přístup ke zvýhodněné nabídce."
             />
           </div>
@@ -466,6 +486,7 @@ export default function SystemPage({ searchParams }: PageProps) {
               ["Den 2 obsah", "2 990 Kč"],
               ["Den 3 obsah", "2 990 Kč"],
               ["5 šablon příspěvků", "1 990 Kč"],
+              ["Profi bio za 3 minuty", "1 490 Kč"],
               ["Rozbor virálních videí", "1 490 Kč"],
               ["Komunita doživotně", "4 990 Kč"],
               ["Šance na 1:1 mentoring", "9 990 Kč"],
@@ -481,7 +502,7 @@ export default function SystemPage({ searchParams }: PageProps) {
             ))}
             <div className="flex justify-between mt-4 pt-3 border-t-2 border-ink font-bold">
               <span>Celková hodnota</span>
-              <span>37 420 Kč</span>
+              <span>38 910 Kč</span>
             </div>
           </div>
 
@@ -534,7 +555,7 @@ export default function SystemPage({ searchParams }: PageProps) {
           className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
           data-reveal
         >
-          Tohle nejsou sliby. <span className="text-accent">Tohle jsou čísla.</span>
+          Co o mně řekli:
         </h2>
         <div className="mt-10 columns-1 sm:columns-2 md:columns-3 gap-4 [column-fill:_balance]" data-reveal>
           {reviews.map((src) => (
@@ -558,27 +579,15 @@ export default function SystemPage({ searchParams }: PageProps) {
           className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
           data-reveal
         >
-          Sledující a views <span className="text-accent">členů Organiky.</span>
+          Výsledky klientů:
         </h2>
         <div className="mt-10" data-reveal data-reveal-delay="1">
-          <MembersVysledkyCarousel />
+          <CaseStudiesCarousel cases={cases} />
         </div>
       </section>
 
       {/* SECTION 11d: MEMBERS RECENZE */}
-      <section className="border-t border-line bg-surface">
-        <div className="container-page py-20">
-          <h2
-            className="mt-3 text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
-            data-reveal
-          >
-            Co říkají <span className="text-accent">členové Organiky.</span>
-          </h2>
-          <div className="mt-10" data-reveal data-reveal-delay="1">
-            <MembersRecenzeCarousel />
-          </div>
-        </div>
-      </section>
+
 
       {/* SECTION 11b: ORIGIN STORY */}
       <section className="border-y border-line bg-surface">
@@ -603,9 +612,9 @@ export default function SystemPage({ searchParams }: PageProps) {
 
           <div className="rounded-2xl mt-10 border border-line bg-white p-6 font-mono text-sm">
             {[
-              ["6 účtů", "z 0 na 10 000+ sledujících"],
+              ["Reálné výsledky", "z 0 na 10 000+ sledujících"],
               ["30 000 000+", "organických zhlédnutí"],
-              ["4 členové Organiky", "700 000+ zhlédnutí společně"],
+              ["4 členové Organiky", "1 000 000+ zhlédnutí"],
               ["0 Kč", "investovaných do reklamy"],
             ].map(([k, v]) => (
               <div
@@ -632,10 +641,10 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 12: GARANCE */}
       <section className="container-page py-20 max-w-3xl text-center md:text-left">
         <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold tracking-tight" data-reveal>
-          Co když u mě <span className="text-accent">nezafunguje?</span>
+          Co když to u mě <span className="text-accent">nezafunguje?</span>
         </h2>
         <p className="mt-5 text-lg text-ink" data-reveal>
-          Systém fungoval u 6 účtů napříč obory. Fungoval u 4 členů Projektu Organika.
+          Systém fungoval u 15 účtů napříč obory. Fungoval u 4 členů Projektu Organika.
         </p>
         <p className="mt-3 text-muted" data-reveal>
           A přesto — pokud do konce 3. dne{" "}
@@ -664,7 +673,6 @@ export default function SystemPage({ searchParams }: PageProps) {
           <ul className="mt-8 space-y-4 text-lg text-ink inline-block text-left md:block" data-reveal>
             {[
               "Pokud hledáš rychlé hacky bez dlouhodobé strategie — nech to být.",
-              "Pokud nemáš co nabídnout (produkt, službu, expertízu) — tohle ti nepomůže.",
               "Pokud nejsi ochotný/á investovat 1 hodinu denně do vlastního růstu — Organika Tě bude stresovat.",
               "Pokud čekáš, že to za Tebe udělá někdo jiný — tady to nedostaneš.",
             ].map((t) => (
@@ -714,16 +722,16 @@ export default function SystemPage({ searchParams }: PageProps) {
               },
               {
                 q: "Jak rychle uvidím první výsledky?",
-                a: "První video produkuješ na konci 2. dne. První signály v reach typicky vidíš během 7–14 dní.",
+                a: "První video produkuješ na konci 2. dne. První signály v reach typicky vidíš během 3–14 dní.",
               },
               {
                 q: "Co se stane po 3 dnech?",
-                a: "Zůstáváš v komunitě doživotně. Pokračuješ s feedbackem, vidíš růst ostatních, máš přístup k pokročilejším strategiím.",
+                a: "Trénink ti zůstane doživotně. Pokračuješ s feedbackem, vidíš růst ostatních, můžeš pokračovat do Growmat Academy pro kompletní systém.",
               },
-              {
-                q: "Mohu dostat fakturu na firmu?",
-                a: "Ano. Po platbě ti automaticky přijde faktura na e-mail.",
-              },
+              // {
+              //   q: "Mohu dostat fakturu na firmu?",
+              //   a: "Ano. Po platbě ti automaticky přijde faktura na e-mail.",
+              // },
               {
                 q: "Co když to není pro mě?",
                 a: "Pokud necítíš 3 aha momenty do konce 3. dne, pošlu Ti osobní rozbor tvého profilu zdarma.",
@@ -754,8 +762,8 @@ export default function SystemPage({ searchParams }: PageProps) {
             </div>
           </div>
           <p className="mt-10 font-display text-xl text-ink">
-            Rozdíl mezi tebou a 4 členy s 700 000 zhlédnutí?{" "}
-            <span className="text-accent">Oni rozhodli teď.</span>
+            Rozdíl mezi tebou a 4 členy s 1 000 000+ zhlédnutí?{" "}
+            <span className="text-accent">Oni se rozhodli teď.</span>
           </p>
           <div className="mt-8 max-w-md mx-auto md:mx-0">
             <CheckoutButton prefill={prefill} className="btn-primary btn-primary-shimmer w-full" />
@@ -769,11 +777,11 @@ export default function SystemPage({ searchParams }: PageProps) {
       {/* SECTION 16: P.S. */}
       <section className="container-page py-20 max-w-3xl text-center md:text-left">
         <p className="mt-5 text-lg text-ink leading-relaxed" data-reveal>
-          Většina lidí, co dosledovala video až sem, zavře stránku. Přečtou ještě pár recenzí.
-          Možná otevřou konkurenční kurz. A za týden zapomenou, že tu kdy byli.
+          Většina lidí, co dosledovala video až sem, zavře stránku. Konzumují zbytečné tipy,
+          co je nikam neposunou.
         </p>
         <p className="mt-4 text-lg text-ink leading-relaxed" data-reveal>
-          A pak tu jsou ti, kteří <strong>rozhodli teď</strong>. Ti, kteří za 3 dny mají
+          A pak tu jsou ti, kteří se <strong>rozhodli teď</strong>. Ti, kteří za 3 dny mají
           hotový profil, první video a jasný plán na 14 dní.
         </p>
         <p className="mt-4 text-lg text-ink leading-relaxed" data-reveal>
